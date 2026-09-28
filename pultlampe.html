@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<title>Ampær</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8cc;--ink:#03045e;--text:#000;--line:#03045e;--grey:#ededed}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fbf8cc;--ink:#03045e;--text:#000}}
+:root[data-theme="dark"]{--bg:#fbf8cc;--ink:#03045e;--text:#000}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:18px;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1266px;margin:0 auto;padding-inline:24px}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg)}
+nav.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:102px;max-width:1236px}
+.logo{font-weight:600;font-size:24px;justify-self:start}
+nav.top ul{display:flex;gap:48px;list-style:none;margin:0;padding:0;font-size:18px}
+nav.top ul a{padding:4px 0;border-bottom:2px solid transparent}
+nav.top ul a:hover,nav.top ul a[aria-current]{border-bottom-color:var(--ink)}
+.icons{display:flex;gap:37px;align-items:center;justify-self:end}
+.icons a{display:block;position:relative}
+.icons .ig{width:24px;height:24.016px}
+.icons .ml{width:23.625px;height:21px}
+.icons .li{width:24px;height:24px}
+.icons a img{width:100%;height:100%}
+.icons .ml img{position:absolute;left:-12.7%;top:-2.29%;width:125.4%;height:116.58%;max-width:none}
+footer{padding-block:64px;font-size:15px}
+@media (max-width:900px){nav.top ul{gap:24px}.icons{gap:22px}}
+@media (max-width:640px){
+  nav.top .wrap{grid-template-columns:1fr auto;height:auto;padding-block:14px;row-gap:10px}
+  .logo{font-size:20px}
+  nav.top ul{grid-column:1/-1;grid-row:2;gap:28px;font-size:16px}
+  .icons{gap:20px}
+}
+
+.cv{position:relative;margin:0 auto;zoom:var(--z,1)}
+.cv .it{position:absolute}
+.cv .t{margin:0;line-height:normal;text-wrap-style:pretty;z-index:1}
+.cv .t.nw{white-space:nowrap}
+.cv .t p{margin:0}
+.cv .t p+p{margin-top:var(--ps,0)}
+.cv .t ul{margin:0;padding-left:1.4em}
+@media (max-width:760px){.cv .t.h{text-wrap-style:balance}}
+.cv img{width:100%;height:100%;max-width:none}
+.cv .rot{transform:rotate(var(--r))}
+.cv .itl{font-style:italic}
+.cv .i a{display:block;height:100%;transition:transform .2s}
+.cv .i a:hover{transform:scale(1.01)}
+.cv .st{font-size:24px;font-weight:600}
+.cv ol.nl{margin:0;padding-left:1.6em;font-style:italic}
+.cv ol.nl li::marker{font-weight:700}
+.cv ol.nl b{font-weight:700}
+@media (max-width:760px){
+  .cv{zoom:1!important;width:auto!important;height:auto!important;display:flex;flex-direction:column;gap:18px;padding-block:8px 24px}
+  .cv .it{position:static;width:auto!important;height:auto!important}
+  .cv .t{font-size:var(--ms,15px)!important;text-align:left!important}
+  .cv .st{font-size:22px}
+  .cv .i{max-width:100%;align-self:center;width:min(100%,var(--mw))!important}
+  .cv .i.ph{width:min(78%,300px)!important}
+  .cv .i img{height:auto}
+  .cv .i.sc{width:100%!important;overflow-x:auto;align-self:stretch}
+  .cv .i.sc img{width:900px;max-width:none}
+  .cv .mh{display:none}
+  .cv .hh{width:auto!important;height:auto!important}
+  .cv .t.nw{white-space:normal}
+  .cv .gap{margin-top:22px}
+}
+.proj{max-width:none;padding-inline:16px}
+.car{position:relative;height:100%}
+.car .track{display:flex;gap:33px;overflow-x:auto;scroll-snap-type:x mandatory;height:100%;scrollbar-width:thin;scrollbar-color:#03045e33 transparent;padding-inline:98px;scroll-padding-inline:98px}
+.car .track img{height:600px;width:auto;flex:none;scroll-snap-align:start;max-width:none}
+.car button{position:absolute;top:270px;width:52px;height:52px;border-radius:50%;border:3px solid #03045e;background:#fbf8cc;color:#03045e;font:600 22px/1 Poppins,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s}
+.car button:hover{background:#03045e;color:#fbf8cc}
+.car .prev{left:24px}.car .next{right:24px}
+.band{background:#f5daa9;height:100%}
+@media (max-width:760px){
+  .car .track{padding-inline:0;scroll-padding-inline:0;gap:12px}
+  .car .track img{height:240px}
+  .car button{top:94px;width:40px;height:40px;font-size:18px}
+  .car .prev{left:6px}.car .next{right:6px}
+  .band{padding-block:24px;margin-inline:-16px}
+}
+@media (max-width:760px){.band .bandimg{position:static!important;width:100%!important;height:auto!important}}</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+  <a class="logo" href="./">Mats Ugland</a>
+  <ul><li><a href="./">Hjem</a></li><li><a href="./#prosjekter">Prosjekter</a></li><li><a href="cv.html">CV</a></li></ul>
+  <div class="icons">
+    <a class="ig" href="https://www.instagram.com/matslagerting/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/ikon-instagram.svg" alt=""></a>
+    <a class="ml" href="mailto:uglandmats@gmail.com" aria-label="E-post: uglandmats@gmail.com" title="uglandmats@gmail.com"><img src="img/ikon-epost.svg" alt=""></a>
+    <a class="li" href="https://www.linkedin.com/in/mats-ugland/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/ikon-linkedin.svg" alt=""></a>
+  </div>
+</div></nav><main class="wrap proj"><div class="cv" data-w="1440" style="width:1440px;height:4812px">
+<h1 class="it t h" style="left:98px;top:56.0px;width:631.8px;order:0;font-size:120.4px;font-weight:700;text-align:left;color:#03045e;--ps:0px;--ms:70px;line-height:111%;">Ampær</h1>
+<div class="it i mh" style="left:761.4px;top:91.3px;width:80.0px;order:1;height:84.0px;--mw:80px;"><img src="img/politiet-i-lomma-01.webp" alt="" loading="lazy"></div>
+<div class="it t h nw gap" style="left:855.3px;top:75.3px;width:191px;order:2;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Gruppeprosjekt</div>
+<div class="it t" style="left:861.6px;top:120.1px;width:184.7px;order:3;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Prosjektet var i samarbeid med Andreas Selnes og Victoria Phan</div>
+<div class="it i mh" style="left:706px;top:249.9px;width:83.0px;order:4;height:74.0px;--mw:83px;"><img src="img/politiet-i-lomma-02.webp" alt="" loading="lazy"></div>
+<div class="it t h nw" style="left:802.5px;top:236.5px;width:100px;order:5;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Varghet</div>
+<div class="it t" style="left:804.5px;top:281.6px;width:184.7px;order:6;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Prosjektet varte i 11 uker</div>
+<div class="it i mh" style="left:967.4px;top:175.1px;width:114.0px;order:7;height:109.0px;--mw:114px;"><img src="img/snakk-til-meg-02.webp" alt="" loading="lazy"></div>
+<div class="it t h nw" style="left:1096px;top:193.4px;width:165px;order:8;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Skoleprosjekt</div>
+<div class="it t" style="left:1096px;top:236.5px;width:196.1px;order:9;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Prosjektet var eksamens-besvarelse i emnet “Kritisk refleksjon i designpraksis” ved OsloMet</div>
+<div class="it t j gap" style="left:102px;top:387.3px;width:411.2px;order:10;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:13px;--ms:15px;">Ampær er en lampe laget for hjemmekontorets nye hverdag, der videomøter har blitt en sentral del av arbeidsdagen. Prosjektet startet under pandemien, da vi la merke til at folk skrudde av kameraet i møter og begrunnet det med rotete rom eller dårlig lys. Ampær løser dette ved å kunne lyse opp både ansiktet og arbeidsflaten, slik at man fremstår mer presentabel og trygg i digitale møter.</div>
+<div class="it i " style="left:500px;top:339.3px;width:940px;order:11;height:614px;--mw:940px;"><img src="img/pultlampe-01.webp" alt="Tre versjoner av Ampær-lampen" loading="lazy"></div>
+<div class="it t gap" style="left:98px;top:807.3px;width:571px;order:12;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;"><p class="st">Prosessen</p><p>Vi startet med å undersøke hvorfor hjemmekontor-belysning så ofte feiler: overhead-lys skaper skygger og kontraster, og det er vanskelig å lyse opp et rom uten blending eller gjenskinn i skjermen. Tidlige brukertester avdekket noe uventet. Folk syntes det var ubehagelig å ha lys rettet direkte mot ansiktet, og opplevde liten effekt av kunstig lys når det allerede var mye dagslys. Dette ga oss en tydelig retning: løsningen måtte være fleksibel, ikke statisk.</p></div>
+<div class="it i " style="left:98px;top:994.3px;width:207.3px;order:13;height:120.2px;--mw:207px;"><img src="img/pultlampe-02.webp" alt="Videomøte-skjermbilde" loading="lazy"></div>
+<div class="it i " style="left:321.3px;top:994.3px;width:207.3px;order:14;height:120.2px;--mw:207px;"><img src="img/pultlampe-03.webp" alt="Videomøte-skjermbilde" loading="lazy"></div>
+<div class="it i " style="left:544.7px;top:994.3px;width:207.3px;order:15;height:120.2px;--mw:207px;"><img src="img/pultlampe-04.webp" alt="Videomøte-skjermbilde" loading="lazy"></div>
+<div class="it i " style="left:823px;top:824.3px;width:469px;order:16;height:673px;--mw:469px;"><img src="img/pultlampe-05.webp" alt="Skisse av person i videomøte med lampe" loading="lazy"></div>
+<div class="it t" style="left:101px;top:1233.3px;width:571px;order:17;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;"><p>Vi utforsket flere konsepter før vi landet på Den sammenleggbare lampen, med to bevegelige lampehoder som kan rettes uavhengig av hverandre. Det gir tre bruksmåter:  lys kun mot ansiktet, kombinert lys mot ansikt og skrivebord, eller diskré lys kun mot arbeidsflaten. Denne fleksibiliteten, kombinert med et rent formspråk, var det som skilte konseptet fra de tidligere ideene våre.</p><p>Prototyping og testing</p></div>
+<h2 class="it t h nw gap" style="left:98px;top:1461.3px;width:135px;order:18;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Prototypen</h2>
+<div class="it i " style="left:98px;top:1524.3px;width:387.3px;order:19;height:268.3px;--mw:387px;"><img src="img/pultlampe-06.webp" alt="Tidlig modell i furu" loading="lazy"></div>
+<div class="it i " style="left:526.3px;top:1524.3px;width:372px;order:20;height:355px;--mw:372px;"><img src="img/pultlampe-07.webp" alt="Arbeid med prototypen i verkstedet" loading="lazy"></div>
+<div class="it i " style="left:939px;top:1524.3px;width:387.3px;order:21;height:290.5px;--mw:387px;"><img src="img/pultlampe-08.webp" alt="Test av lyspanel" loading="lazy"></div>
+<div class="it i " style="left:98px;top:1827.3px;width:387.3px;order:22;height:370.4px;--mw:387px;"><img src="img/pultlampe-09.webp" alt="Montering av prototypen" loading="lazy"></div>
+<div class="it i " style="left:526px;top:1916.3px;width:372px;order:23;height:248px;--mw:372px;"><img src="img/pultlampe-10.webp" alt="Lyspanel i mørket" loading="lazy"></div>
+<div class="it t" style="left:944px;top:1932.3px;width:382px;order:24;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Fra en enkel modell i furu til 3D-printede prototyper, jobbet vi oss frem mot en løsning som fungerte både funksjonelt og visuelt.</div>
+<h2 class="it t h nw gap" style="left:98px;top:2373.3px;width:181px;order:25;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Brukertestning</h2>
+<div class="it t" style="left:98px;top:2426.3px;width:571px;order:26;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Brukertesting gjennom hele prosessen var avgjørende. Den viste blant annet at preferanser varierte mye fra person til person. Noen ville ha PC-en til siden, andre ønsket helt andre lysstyrker. Denne innsikten formet flere konkrete designvalg, som en tekstureret gripeflate på lampehodet, etter at flere brukere i starten ikke fant et naturlig sted å justere lampen fra.</div>
+<div class="it i " style="left:986px;top:2311.3px;width:345px;order:27;height:508px;--mw:345px;"><img src="img/pultlampe-11.webp" alt="Brukertest med prototypen" loading="lazy"></div>
+<div class="it i " style="left:384px;top:2553.3px;width:280px;order:28;height:266px;--mw:280px;"><img src="img/pultlampe-12.webp" alt="Brukertest ved skrivebord" loading="lazy"></div>
+<div class="it i " style="left:688px;top:2553.3px;width:283px;order:29;height:266px;--mw:283px;"><img src="img/pultlampe-13.webp" alt="Brukertest ved skrivebord" loading="lazy"></div>
+<h2 class="it t h nw gap" style="left:98px;top:2900.3px;width:185px;order:30;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Endelig løsning</h2>
+<div class="it i " style="left:98px;top:2966.3px;width:402px;order:31;height:263px;--mw:402px;"><img src="img/pultlampe-14.webp" alt="Lys kun mot ansiktet" loading="lazy"></div>
+<div class="it i " style="left:521px;top:2966.7px;width:402px;order:32;height:262.6px;--mw:402px;"><img src="img/pultlampe-15.webp" alt="Lys kun mot PC og arbeidsflate" loading="lazy"></div>
+<div class="it i " style="left:944px;top:2966.3px;width:402px;order:33;height:263px;--mw:402px;"><img src="img/pultlampe-16.webp" alt="Kombinert lys mot ansikt og skrivebord" loading="lazy"></div>
+<div class="it hh " style="left:0px;top:3311.3px;width:1440px;order:34;height:612px;"><div class="car" role="region" aria-label="Bildekarusell"><div class="track" tabindex="0"><img src="img/pultlampe-17.webp" alt="Prototype av Ampær (DSC_1458)" width="900" height="600" loading="lazy"><img src="img/pultlampe-18.webp" alt="Prototype av Ampær (bilde-8)" width="900" height="600" loading="lazy"><img src="img/pultlampe-19.webp" alt="Prototype av Ampær (bilde-9)" width="900" height="600" loading="lazy"><img src="img/pultlampe-20.webp" alt="Prototype av Ampær (DSC_1477)" width="400" height="600" loading="lazy"><img src="img/pultlampe-21.webp" alt="Prototype av Ampær (DSC_1488)" width="900" height="600" loading="lazy"><img src="img/pultlampe-22.webp" alt="Prototype av Ampær (DSC_1489)" width="900" height="600" loading="lazy"><img src="img/pultlampe-23.webp" alt="Prototype av Ampær (DSC_1531)" width="900" height="600" loading="lazy"></div><button class="prev" type="button" aria-label="Forrige bilde">&larr;</button><button class="next" type="button" aria-label="Neste bilde">&rarr;</button></div></div>
+<div class="it t  itl" style="left:98px;top:3923.3px;width:398px;order:35;font-size:15px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:15px;">Bla deg gjennom bildekarrusellen for å se flere bilder</div>
+<div class="it t gap" style="left:98px;top:4127.3px;width:874px;order:36;font-size:15px;font-weight:400;text-align:left;color:#000;--ps:13px;--ms:15px;">Det jeg tar med meg som designer er verdien av å teste tidlig og ofte, også med enkle mockuper. De tidlige testene ga oss innsikt vi aldri ville fått fra research alene, og formet retningen på prosjektet lenge før noe var ferdig. Det har gjort meg mer bevisst på å bruke prototyper som verktøy for å stille spørsmål, ikke bare for å bekrefte en løsning.</div>
+<div class="it hh " style="left:0px;top:4245.3px;width:1440px;order:37;height:527px;"><div class="band"><img src="img/pultlampe-24.webp" alt="Tre renderinger av Ampær med ulike lampevinkler" style="position:relative;left:336px;top:31px;width:767px;height:431px;max-width:none" class="bandimg"></div></div>
+</div></main><script>
+(function(){var c=document.querySelectorAll('.cv');function f(){c.forEach(function(e){var w=+e.dataset.w,a=document.documentElement.clientWidth-32;e.style.setProperty('--z',window.matchMedia('(max-width:760px)').matches?1:Math.min(1,a/w));});}f();addEventListener('resize',f);})();
+</script><script>
+document.querySelectorAll('.car').forEach(function(c){var t=c.querySelector('.track');function step(d){var w=t.querySelector('img').getBoundingClientRect().width+33;t.scrollBy({left:d*w,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+c.querySelector('.prev').addEventListener('click',function(){step(-1)});c.querySelector('.next').addEventListener('click',function(){step(1)});});
+</script>
+<footer class="wrap">© Mats Ugland</footer>
+</body>
+</html>

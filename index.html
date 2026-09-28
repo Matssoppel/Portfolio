@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<title>Mats Ugland Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8cc;--ink:#03045e;--text:#000;--line:#03045e;--grey:#ededed}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fbf8cc;--ink:#03045e;--text:#000}}
+:root[data-theme="dark"]{--bg:#fbf8cc;--ink:#03045e;--text:#000}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:18px;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1266px;margin:0 auto;padding-inline:24px}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg)}
+nav.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:102px;max-width:1236px}
+.logo{font-weight:600;font-size:24px;justify-self:start}
+nav.top ul{display:flex;gap:48px;list-style:none;margin:0;padding:0;font-size:18px}
+nav.top ul a{padding:4px 0;border-bottom:2px solid transparent}
+nav.top ul a:hover,nav.top ul a[aria-current]{border-bottom-color:var(--ink)}
+.icons{display:flex;gap:37px;align-items:center;justify-self:end}
+.icons a{display:block;position:relative}
+.icons .ig{width:24px;height:24.016px}
+.icons .ml{width:23.625px;height:21px}
+.icons .li{width:24px;height:24px}
+.icons a img{width:100%;height:100%}
+.icons .ml img{position:absolute;left:-12.7%;top:-2.29%;width:125.4%;height:116.58%;max-width:none}
+footer{padding-block:64px;font-size:15px}
+@media (max-width:900px){nav.top ul{gap:24px}.icons{gap:22px}}
+@media (max-width:640px){
+  nav.top .wrap{grid-template-columns:1fr auto;height:auto;padding-block:14px;row-gap:10px}
+  .logo{font-size:20px}
+  nav.top ul{grid-column:1/-1;grid-row:2;gap:28px;font-size:16px}
+  .icons{gap:20px}
+}
+
+.intro{padding-left:13px}
+@media (max-width:560px){.intro{padding-left:0}}
+.hero h1{font-weight:700;font-size:clamp(56px,10vw,120px);line-height:1;margin:0;padding-top:0;color:var(--ink)}
+.roles{display:grid;grid-template-columns:1fr auto 1fr;gap:32px;align-items:center;margin:48px 0 96px;font-weight:700;font-size:clamp(40px,7.8vw,112px);line-height:1.1}
+.roles .l{text-align:right}
+.roles .l span{display:block;color:transparent;-webkit-text-stroke:2px var(--ink)}
+.roles .bar{width:2px;align-self:stretch;background:var(--ink)}
+.about{max-width:900px;font-size:24px;line-height:1.35;margin-bottom:120px;padding-left:19px}
+h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:80px 40px;margin:0 0 120px;padding-top:46px}
+.card{position:relative;display:grid;grid-template-columns:49.23% 1fr;column-gap:3.72%;height:348px;color:var(--text);isolation:isolate}
+.card .pat{position:absolute;top:-13.12%;right:-3.82%;bottom:24.72%;left:26.59%;background:url(img/hjem-01.webp) center/cover no-repeat;z-index:-1}
+.card .img{border:1.5px solid #000;background:var(--grey);overflow:hidden}
+.card .img img{width:100%;height:100%;object-fit:cover}
+.card .txt{display:flex;flex-direction:column;padding-right:5.8%;min-width:0}
+.card h3{font-weight:600;font-size:24px;line-height:normal;margin:0}
+.card p{font-size:15px;line-height:normal;margin:0}
+.tag{margin-top:auto;margin-bottom:10.31%;width:192px;max-width:100%;height:32px;border:3px solid var(--line);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text);background:transparent;transition:background .15s,color .15s}
+.card:hover .tag,.card:focus-visible .tag{background:var(--ink);color:var(--bg)}
+.card:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+@media (max-width:1100px){.card{height:auto;min-height:348px}.card .txt{padding-bottom:12px}.tag{margin-bottom:0;margin-top:20px}}
+@media (max-width:900px){.grid{grid-template-columns:1fr;margin-inline:0}}
+@media (max-width:560px){
+  .card{grid-template-columns:1fr;row-gap:16px}
+  .card .img{aspect-ratio:290/348;max-width:100%}
+  .card .pat{top:auto;bottom:-16px;left:30%;right:-16px;height:62%}
+  .roles{grid-template-columns:1fr;gap:0;margin:32px 0 64px}.roles .bar{display:none}.roles .l{text-align:left}
+  .about{font-size:18px;margin-left:0;margin-bottom:80px}
+  .grid{gap:64px}
+}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+  <a class="logo" href="./">Mats Ugland</a>
+  <ul><li><a href="./" aria-current="page">Hjem</a></li><li><a href="./#prosjekter">Prosjekter</a></li><li><a href="cv.html">CV</a></li></ul>
+  <div class="icons">
+    <a class="ig" href="https://www.instagram.com/matslagerting/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/ikon-instagram.svg" alt=""></a>
+    <a class="ml" href="mailto:uglandmats@gmail.com" aria-label="E-post: uglandmats@gmail.com" title="uglandmats@gmail.com"><img src="img/ikon-epost.svg" alt=""></a>
+    <a class="li" href="https://www.linkedin.com/in/mats-ugland/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/ikon-linkedin.svg" alt=""></a>
+  </div>
+</div></nav>
+<main class="wrap hero" id="hjem">
+ <div class="intro">
+  <h1>Mats<br>Ugland</h1>
+  <div class="roles" aria-label="UX, Interaksjonsdesign, Produktdesign">
+    <div class="l"><span>UX</span><span>Interaksjons</span><span>Produkt</span></div>
+    <div class="bar"></div>
+    <div>Design</div>
+  </div>
+  <p class="about">Jeg er designer i skjæringspunktet mellom produktdesign, UX og interaksjonsdesign og brenner for faget i hele sin bredde. Med bachelor i produktdesign fra OsloMet og en pågående master i Informatikk: design, bruk og interaksjon ved UiO, har jeg en verktøykasse som spenner fra prototyping og illustrasjon til programmering og Figma. Det gjør at jeg beveger meg fritt mellom det fysiske og det digitale.<br><br>Arbeidserfaringen er like variert: campusutvikling ved OsloMet, sommerinternship hos Forsvarsbygg og flere år som studentpolitiker. Sistnevnte har lært meg hvordan godt design henger sammen med gode prosesser og medvirkning.</p>
+  <h2 class="sec" id="prosjekter">Prosjekter</h2>
+ </div>
+  <section class="grid">
+  <a class="card" href="digitalisering-av-byggeplass.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-02.webp" alt="Prosjekthub" loading="lazy"></div><div class="txt"><h3>Prosjekthub</h3><p>Prototype av et rollebasert dashbord laget under et sommerinternship i Forsvarsbygg. Temaet var digitalisering av byggeplass og prosjektet kombinerer brukerintervjuer, befaringer og UX-design.</p><span class="tag">UX-design</span></div></a>
+  <a class="card" href="snakk-til-meg.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-03.webp" alt="Snakk til meg" loading="lazy"></div><div class="txt"><h3>“Snakk til meg”</h3><p>Snakk til meg er en interaktiv installasjon laget i UiO-emnet Tangible Interaction, hvor en menneskestor dukke reagerer på besøkendes stemme gjennom en stepmotor og fiskesnører. Temaet var puls, og prosjektet kombinerer fysisk konstruksjon, mikroelektronikk og lyddesign.</p><span class="tag">Interaksjonsdesign</span></div></a>
+  <a class="card" href="politiet-i-lomma.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-04.webp" alt="Politiet i lomma" loading="lazy"></div><div class="txt"><h3>Politiet i lomma</h3><p>Hva gjør du når du føler deg utrygg, men situasjonen ikke er alvorlig nok til å ringe politiet? Under UX-Cup-finalen hos Bekk designet vi "Trygg", en app som gir politiet en helt ny rolle i gråsonen mellom trygghet og fare. Fra idé til ferdig konsept på tre intense dager.</p><span class="tag">UX-design</span></div></a>
+  <a class="card" href="workshops.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-05.webp" alt="Workshop for campusutvikling" loading="lazy"></div><div class="txt"><h3>Workshop for campusutvikling</h3><p>En serie brukerinvolverende workshops gjennomført som del av OsloMets campusutviklings-plan, hvor jeg har bidratt til planlegging og gjennomføring sammen med et tverrfaglig team.</p><span class="tag">Brukermedvirkning</span></div></a>
+  <a class="card" href="pultlampe.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-06.webp" alt="Den moderne pultlampen" loading="lazy"></div><div class="txt"><h3>Den moderne pultlampen</h3><p>Ampær er en sammenleggbar skrivebordslampe laget i skolefaget Kritisk refleksjon i designpraksis. Temaet var dårlig belysning i hjemmekontor under videomøter.</p><span class="tag">Produktdesign</span></div></a>
+  </section>
+</main>
+<footer class="wrap">© Mats Ugland</footer>
+</body>
+</html>
