@@ -2,6 +2,8 @@
 
 Personal portfolio of Mats Ugland, a designer working across product design, UX and interaction design. The site presents selected projects and a CV (in Norwegian).
 
+**Live site:** https://matssoppel.github.io/Portfolio/
+
 ## Pages
 
 | File | Page |
