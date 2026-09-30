@@ -91,6 +91,53 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
   .grid{gap:64px}
   .contact{padding-left:0}.contact .lead{font-size:18px}
 }
+
+/* Andre prosjekter: carousel + detail dialog */
+.more{margin:0 0 120px}
+.more h2.sec{margin-bottom:12px;padding-left:19px}
+.more .lead{font-size:18px;margin:0 0 40px;padding-left:19px;max-width:640px}
+.mcar{position:relative}
+.mtrack{display:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 19px 16px;scroll-padding-inline:19px;scrollbar-width:thin;scrollbar-color:#03045e33 transparent}
+.mcard{flex:none;width:min(380px,82vw);scroll-snap-align:start;display:flex;flex-direction:column;gap:12px;text-align:left;background:none;border:0;padding:0;font:inherit;color:var(--text);cursor:pointer}
+.mcard .ph{aspect-ratio:4/3;border:1.5px solid #000;background:var(--grey);overflow:hidden}
+.mcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.mcard:hover .ph img{transform:scale(1.03)}
+.mcard h3{font-weight:600;font-size:22px;margin:4px 0 0}
+.mcard:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.mcard p{font-size:15px;margin:0}
+.mcard .meta{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--ink)}
+.mcard .tag{margin:0;width:auto;padding:0 16px}
+.mcard:hover .tag{background:var(--ink);color:var(--bg)}
+.mcar .nav,.mdlg .nav{position:absolute;width:48px;height:48px;border-radius:50%;border:3px solid var(--ink);background:var(--bg);color:var(--ink);font:600 20px/1 Poppins,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s;z-index:2}
+.mcar .nav:hover,.mdlg .nav:hover{background:var(--ink);color:var(--bg)}
+.mcar .nav{top:calc(min(380px,82vw)*.375 - 24px)}
+.mcar .prev{left:-8px}.mcar .next{right:-8px}
+.mcar .nav[hidden],.mdlg .nav[hidden]{display:none}
+.mdlg{width:min(1100px,calc(100vw - 32px));max-height:calc(100vh - 32px);overflow-y:auto;overscroll-behavior:contain;border:3px solid var(--ink);border-radius:12px;background:var(--bg);color:var(--text);padding:0}
+.mdlg::backdrop{background:rgba(3,4,94,.55)}
+.mdlg .in{padding:28px 32px 32px;display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.mdlg header{display:flex;justify-content:space-between;align-items:start;gap:16px}
+.mdlg h3{font-size:clamp(26px,4vw,40px);font-weight:700;color:var(--ink);margin:0;line-height:1.1}
+.mdlg .meta{display:flex;gap:12px;align-items:center;margin-top:10px;font-size:14px;color:var(--ink)}
+.mdlg .meta .tag{margin:0;width:auto;padding:0 16px}
+.mdlg .close{flex:none;width:44px;height:44px;border-radius:50%;border:3px solid var(--ink);background:none;color:var(--ink);font:600 22px/1 Poppins,system-ui,sans-serif;cursor:pointer}
+.mdlg .close:hover{background:var(--ink);color:var(--bg)}
+.mdlg .gal{position:relative;min-width:0}
+.mdlg .gtrack{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#03045e33 transparent}
+.mdlg .gtrack img{flex:none;height:min(460px,50vh);width:auto;max-width:none;scroll-snap-align:start;border:1.5px solid #000;background:#fff}
+.mdlg .gal .nav{top:calc(min(460px,50vh)/2 - 24px)}
+.mdlg .gal .prev{left:8px}.mdlg .gal .next{right:8px}
+.mdlg .txt{font-size:16px;line-height:1.55;max-width:760px}
+.mdlg .txt p{margin:0 0 12px}
+@media (prefers-reduced-motion:reduce){.mcard .ph img{transition:none}}
+@media (max-width:560px){
+  .more h2.sec,.more .lead{padding-left:0}
+  .mtrack{padding-inline:0;scroll-padding-inline:0;gap:20px}
+  .mcar .nav{display:none}
+  .mdlg .in{padding:20px 18px 24px}
+  .mdlg .gtrack img{height:min(300px,42vh)}
+  .mdlg .gal .nav{display:none}
+}
 </style>
 </head>
 <body>
@@ -116,10 +163,20 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
  </div>
   <section class="grid">
   <a class="card" href="digitalisering-av-byggeplass.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-02.webp" alt="Prosjekthub" loading="lazy"></div><div class="txt"><h3>Prosjekthub</h3><p>Prototype av et rollebasert dashbord laget under et sommerinternship i Forsvarsbygg. Temaet var digitalisering av byggeplass og prosjektet kombinerer brukerintervjuer, befaringer og UX-design.</p><span class="tag">UX-design</span></div></a>
+  <a class="card" href="politiet-i-lomma.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-04.webp" alt="Politiet i lomma" loading="lazy"></div><div class="txt"><h3>Politiet i lomma</h3><p>Hva gjør du når du føler deg utrygg, men situasjonen ikke er alvorlig nok til å ringe politiet? Under UX-Cup-finalen hos Bekk designet vi "Trygg", en app som gir politiet en helt ny rolle i gråsonen mellom trygghet og fare. Fra idé til ferdig konsept på tre intense dager.</p><span class="tag">UX-design</span></div></a>
   <a class="card" href="workshops.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-05.webp" alt="Workshop for campusutvikling" loading="lazy"></div><div class="txt"><h3>Workshop for campusutvikling</h3><p>Åtte brukerinvolverende workshops med 15–40 deltakere, som del av OsloMets campusutviklingsplan. Jeg planla og ledet workshopene, og innspillene la grunnlaget for den endelige planen.</p><span class="tag">Brukermedvirkning</span></div></a>
   <a class="card" href="snakk-til-meg.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-03.webp" alt="Snakk til meg" loading="lazy"></div><div class="txt"><h3>“Snakk til meg”</h3><p>Snakk til meg er en interaktiv installasjon laget i UiO-emnet Tangible Interaction, hvor en menneskestor dukke reagerer på besøkendes stemme gjennom en stepmotor og fiskesnører. Temaet var puls, og prosjektet kombinerer fysisk konstruksjon, mikroelektronikk og lyddesign.</p><span class="tag">Interaksjonsdesign</span></div></a>
-  <a class="card" href="politiet-i-lomma.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-04.webp" alt="Politiet i lomma" loading="lazy"></div><div class="txt"><h3>Politiet i lomma</h3><p>Hva gjør du når du føler deg utrygg, men situasjonen ikke er alvorlig nok til å ringe politiet? Under UX-Cup-finalen hos Bekk designet vi "Trygg", en app som gir politiet en helt ny rolle i gråsonen mellom trygghet og fare. Fra idé til ferdig konsept på tre intense dager.</p><span class="tag">UX-design</span></div></a>
   <a class="card" href="pultlampe.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-06.webp" alt="Den moderne pultlampen" loading="lazy"></div><div class="txt"><h3>Den moderne pultlampen</h3><p>Ampær er en sammenleggbar skrivebordslampe laget i emnet Kritisk refleksjon i designpraksis ved OsloMet. Temaet var dårlig belysning i hjemmekontor under videomøter.</p><span class="tag">Produktdesign</span></div></a>
+  </section>
+  <section class="more" id="andre-prosjekter" aria-labelledby="andre-tittel">
+   <h2 class="sec" id="andre-tittel">Andre prosjekter</h2>
+   <p class="lead">Mindre prosjekter som viser andre sider av det jeg kan. Klikk på et prosjekt for å se mer.</p>
+   <div class="mcar"><button type="button" class="nav prev" aria-label="Forrige prosjekt" hidden>←</button><div class="mtrack">
+    <button type="button" class="mcard" data-open="d-output" aria-haspopup="dialog"><div class="ph"><img src="img/andre-output-01.webp" alt="Forsiden på Output utgave 15, «Våken»" loading="lazy"></div><h3>Studentmagasinet >Output</h3><p>Forside, redaksjonsside og illustrerte oppslag i studentmagasinet ved Institutt for informatikk.</p><div class="meta"><span class="tag">Redaksjonell design</span><span>2026</span></div></button>
+    <button type="button" class="mcard" data-open="d-promillefri" aria-haspopup="dialog"><div class="ph"><img src="img/andre-promillefri-plakat.webp" alt="Plakat for Bacchus kombucha med teksten Hold ut natten" loading="lazy"></div><h3>Promillefri</h3><p>Bacheloroppgaven min: en kombucha-merkevare for unge som ikke drikker, men vil være med på festen.</p><div class="meta"><span class="tag">Konsept og merkevare</span><span>2022</span></div></button>
+    <button type="button" class="mcard" data-open="d-tavlehonning" aria-haspopup="dialog"><div class="ph"><img src="img/andre-tavlehonning-rammer.webp" alt="Porsjonsrammer i bøkefinér med vokskaker" loading="lazy"></div><h3>Tavlehonning</h3><p>Prosjektleder for elleve studenter som laget produksjonsmetode og emballasje for tavlehonning.</p><div class="meta"><span class="tag">Prosjektledelse</span><span>2021</span></div></button>
+    <button type="button" class="mcard" data-open="d-studentparlamentet" aria-haspopup="dialog"><div class="ph"><img src="img/andre-studentparlamentet-tiger.webp" alt="Maskoten Tigeren i fire positurer" loading="lazy"></div><h3>Studentparlamentets grafiske profil</h3><p>Ikonsett, maskot og logoer til Studentparlamentet ved OsloMet, pluss opplæring i visuell kommunikasjon.</p><div class="meta"><span class="tag">Grafisk design</span><span>2022–2023</span></div></button>
+   </div><button type="button" class="nav next" aria-label="Neste prosjekt" hidden>→</button></div>
   </section>
   <section class="contact" id="kontakt" aria-labelledby="kontakt-tittel">
    <h2 class="sec" id="kontakt-tittel">Kontakt</h2>
@@ -128,6 +185,68 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
    <ul class="links"><li><a href="https://www.linkedin.com/in/mats-ugland/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="cv.html">Se CV</a></li></ul>
   </section>
 </main>
+<!-- SKJULTE PROSJEKTER (Iskremboks for gjenbruk, Stitch-Wear)
+For å vise et prosjekt igjen: flytt <button class="mcard" ...> inn i <div class="mtrack"> i "Andre prosjekter",
+og flytt <dialog ...> ut av denne kommentaren, til resten av dialogene rett etter </main>.
+
+    <button type="button" class="mcard" data-open="d-iskrem" aria-haspopup="dialog"><div class="ph"><img src="img/andre-iskrem-piknik.webp" alt="Iskremboksen på en rutete piknikduk med skåler og iskremskje" loading="lazy"></div><h3>Iskremboks for gjenbruk</h3><p>En iskremboks laget for et nytt liv i fryseren etter at isen er spist opp.</p><div class="meta"><span class="tag">Bærekraftig design</span><span>2020</span></div></button>
+<dialog class="mdlg" id="d-iskrem" aria-labelledby="d-iskrem-t"><div class="in">
+  <header><div><h3 id="d-iskrem-t">Iskremboks for gjenbruk</h3><div class="meta"><span class="tag">Bærekraftig design</span><span>2020</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder"><img src="img/andre-iskrem-piknik.webp" alt="Iskremboksen på en rutete piknikduk med skåler og iskremskje" width="1095" height="648" loading="lazy"><img src="img/andre-iskrem-egenskaper.webp" alt="Seks egenskaper ved boksen, fra gjennomsiktig plast til avtakbar etikett" width="1600" height="1091" loading="lazy"><img src="img/andre-iskrem-skisse.webp" alt="Skisse av en hånd som holder boksen" width="1600" height="1131" loading="lazy"><img src="img/andre-iskrem-grep.webp" alt="Prototypen holdt i hendene" width="1600" height="1067" loading="lazy"><img src="img/andre-iskrem-test.webp" alt="Test av skuffing fra prototypen" width="1200" height="1600" loading="lazy"><img src="img/andre-iskrem-rendering.webp" alt="Rendering av boksen med etikett" width="1600" height="1600" loading="lazy"><img src="img/andre-iskrem-rendering-2.webp" alt="Rendering av boksen på kjøkkenbenken" width="1600" height="900" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>Alle har tatt en iskremboks ut av fryseren og funnet frossen suppe fra fire år siden. Hvis matemballasje kan brukes om igjen, trenger man færre nye oppbevaringsbokser, det blir mindre avfall, og det blir lettere å ta vare på mat i stedet for å kaste den.</p><p>I emnet Menneske og funksjon – produkt og metode ved OsloMet designet jeg sammen med Leah Carys Wilce og Aleksander Tobiassen en iskremboks som er bedre egnet for et nytt liv etter bruk: gjennomsiktig plast så du ser hva som er inni, avtakbar etikett, avrundet og teksturert grep, en lengre boks som er lettere å skuffe fra, og logo på lokket.</p></div>
+</div></dialog>
+    <button type="button" class="mcard" data-open="d-stitchwear" aria-haspopup="dialog"><div class="ph"><img src="img/andre-stitchwear-jakke.webp" alt="Jakke med broderi i livet, sett bakfra" loading="lazy"></div><h3>Stitch-Wear</h3><p>Hvordan få flere til å gjenbruke gamle broderier som ellers blir kastet?</p><div class="meta"><span class="tag">Brukerinnsikt</span><span>2021</span></div></button>
+<dialog class="mdlg" id="d-stitchwear" aria-labelledby="d-stitchwear-t"><div class="in">
+  <header><div><h3 id="d-stitchwear-t">Stitch-Wear</h3><div class="meta"><span class="tag">Brukerinnsikt</span><span>2021</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder"><img src="img/andre-stitchwear-jakke.webp" alt="Jakke med broderi i livet, sett bakfra" width="1200" height="1600" loading="lazy"><img src="img/andre-stitchwear-veske.webp" alt="Veske laget av gjenbrukt broderi" width="1200" height="1600" loading="lazy"><img src="img/andre-stitchwear-personaer.webp" alt="Fire personaer for målgruppen" width="1800" height="868" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>I emnet Kulturforståelse og kommunikasjon ved OsloMet utforsket vi broderi- og gjør-det-selv-kulturen, og hvordan man kan inspirere andre til å gjøre noe kreativt, morsomt og bærekraftig. Vi intervjuet både broderientusiaster og folk i målgruppen, og lagde fire personaer som dekket spennet av brukere vi ville nå.</p><p>Med personaene som utgangspunkt lagde vi prosjekter som ble delt på Instagram sammen med oppskrifter og inspirasjon. Jeg sydde jakken og vesken. Personaene, innholdet til sosiale medier, konseptene og kartleggingen gjorde vi sammen med Isabel Muñoz, Hans Arne Skårerverket og Hermine Poppe.</p></div>
+</div></dialog>
+-->
+
+<dialog class="mdlg" id="d-studentparlamentet" aria-labelledby="d-studentparlamentet-t"><div class="in">
+  <header><div><h3 id="d-studentparlamentet-t">Studentparlamentets grafiske profil</h3><div class="meta"><span class="tag">Grafisk design</span><span>2022–2023</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder"><img src="img/andre-studentparlamentet-tiger.webp" alt="Tigeren i fire positurer på oransje bakgrunn" width="1800" height="1029" loading="lazy"><img src="img/andre-studentparlamentet-byggesett.webp" alt="Tigeren delt opp i kropp, armer, ben og hale, og satt sammen til en ferdig positur" width="1800" height="1029" loading="lazy"><img src="img/andre-studentparlamentet-skilt.webp" alt="Oransje skilt med Tigeren og teksten Tigertorget på campus" width="900" height="1200" loading="lazy"><img src="img/andre-studentparlamentet-fasade.webp" alt="Tigeren og teksten Tigertorget på murfasaden, med Studentparlamentets logo i et rundt vindu" width="900" height="1200" loading="lazy"><img src="img/andre-studentparlamentet-ikoner.webp" alt="Utvalg av ikoner fra ikonsettet" width="1800" height="1200" loading="lazy"><img src="img/andre-studentparlamentet-fakultetsrad.webp" alt="Logoer for fire studentfakultetsråd" width="1373" height="915" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>Som læringsmiljø- og internansvarlig i Studentparlamentet ved OsloMet utarbeidet jeg en ny grafisk profil. Jeg bygget videre på OsloMets grafiske profil, der font og farger allerede var gitt, og beholdt Studentparlamentets egen logo.</p><p>Jeg tegnet et ikonsett på rundt 50 ikoner, maskoten Tigeren og logoer for fire studentfakultetsråd. Tigeren er satt sammen av faste deler, så nye positurer kan lages ved å flytte på armer, ben og hale. Til slutt holdt jeg en opplæring for arbeidsutvalget i hvordan de kunne bruke profilen, med tips om komposisjon, teksthierarki og foto.</p><p>I dag brukes Tigeren rundt på campus, blant annet på skiltet og fasaden ved Tigertorget.</p></div>
+</div></dialog>
+<dialog class="mdlg" id="d-output" aria-labelledby="d-output-t"><div class="in">
+  <header><div><h3 id="d-output-t">Studentmagasinet >Output</h3><div class="meta"><span class="tag">Redaksjonell design</span><span>2026</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder"><img src="img/andre-output-01.webp" alt="Forsiden på Output utgave 15, «Våken»" width="848" height="1100" loading="lazy"><img src="img/andre-output-02.webp" alt="Redaksjonsoppslaget med portretter av redaksjonen" width="1700" height="1099" loading="lazy"><img src="img/andre-output-04.webp" alt="Oppslaget «Foreninger ved IFI», designet som en oppslagstavle" width="1697" height="1095" loading="lazy"><img src="img/andre-output-03.webp" alt="Energidrikk-anmeldelsen" width="1700" height="1099" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>Jeg er nestleder og medredaktør i >Output, studentmagasinet ved Institutt for informatikk på UiO. I utgave 15, «Våken» (april 2026), designet jeg forsiden og redaksjonssiden. Figurene er illustrert av Jostein Røstad Jensen, mens jeg sto for komposisjon og farger.</p><p>Jeg illustrerte også oppslagene «Foreninger ved IFI», der hver linjeforening presenteres på en oppslagstavle, og skrev energidrikk-anmeldelsen sammen med Karla Jacobsen.</p></div>
+</div></dialog>
+<dialog class="mdlg" id="d-promillefri" aria-labelledby="d-promillefri-t"><div class="in">
+  <header><div><h3 id="d-promillefri-t">Promillefri</h3><div class="meta"><span class="tag">Konsept og merkevare</span><span>2022</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder"><img src="img/andre-promillefri-plakat.webp" alt="Plakat for Bacchus kombucha med teksten Hold ut natten" width="1070" height="1600" loading="lazy"><img src="img/andre-promillefri-brukerreise.webp" alt="Brukerreise før, under og etter festen, med typene som legger press" width="1754" height="1241" loading="lazy"><img src="img/andre-promillefri-boks.webp" alt="Boksdesign for Bacchus kombucha" width="953" height="1368" loading="lazy"><img src="img/andre-promillefri-bar.webp" alt="Bacchus-boksen i en bar ved siden av ølkraner" width="1600" height="904" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>I bacheloroppgaven i produktdesign ved OsloMet ville jeg bruke design for å gjøre det lettere for unge som velger å ikke drikke, å henge med i det sosiale livet. De jeg intervjuet, fortalte at de følte de måtte drikke for ikke å bli frosset ut eller sett på som festbrems.</p><p>Jeg kartla brukerreisen før, under og etter festen, med tre typer som legger press: presseren, den nysgjerrige og skeptikeren. De fleste alkoholfrie alternativer markedsføres mot et voksent og fornuftig publikum, så løsningen ble Bacchus, en kombucha oppkalt etter den romerske guden for drikk, teater og galskap. Boksen passer inn blant de andre drikkene på en fest, så oppmerksomheten er på deg og ikke på hva du drikker.</p></div>
+</div></dialog>
+<dialog class="mdlg" id="d-tavlehonning" aria-labelledby="d-tavlehonning-t"><div class="in">
+  <header><div><h3 id="d-tavlehonning-t">Tavlehonning</h3><div class="meta"><span class="tag">Prosjektledelse</span><span>2021</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder"><img src="img/andre-tavlehonning-rammer.webp" alt="Porsjonsrammer i bøkefinér med vokskaker" width="1600" height="1067" loading="lazy"><img src="img/andre-tavlehonning-ramme.webp" alt="Porsjonsramme i bøkefinér" width="1600" height="1067" loading="lazy"><img src="img/andre-tavlehonning-emballasje.webp" alt="Emballasje for tavlehonning og ferdige honningporsjoner" width="1532" height="880" loading="lazy"><img src="img/andre-tavlehonning-team.webp" alt="Prosjektteamet" width="1600" height="1131" loading="lazy"><img src="img/andre-tavlehonning-gigamapping.webp" alt="Mats lærer teamet gigamapping" width="1600" height="655" loading="lazy"><img src="img/andre-tavlehonning-gigamap.webp" alt="Gigamap laget av teamet i Miro" width="1109" height="575" loading="lazy"><img src="img/andre-tavlehonning-mordmysterium.webp" alt="Banan-mordmysterium med bevismarkører" width="1125" height="750" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>Hvert år før jul jobber studentene på bachelorprogrammet i produktdesign ved OsloMet i Design Office, fire ukers prosjekter for ekte oppdragsgivere. I tredje studieår var jeg en av tre prosjektledere for et team på elleve studenter, sammen med Leah Carys Wilce og Ludvig Nygaard Juul. Oppdraget var å lage en produksjonsmetode og emballasje for tavlehonning for birøkteren Christina Westerveld Haug.</p><p>Vi planla og ledet designprosessen med research, sprinter, skissing, testing og prototyping. Jeg lærte teamet gigamapping, og mellom øktene hadde vi energizere for å skape psykologisk trygghet. Hver torsdag iscenesatte Ludvig et banan-mordmysterium.</p><p>Løsningen ble porsjonsrammer i bøkefinér som passer i en vanlig halvramme i bikuben. Biene bygger vokskakene inne i rammene, og rammene limes med honning, så de er både mattrygge og komposterbare. Vi laget også en laserskåret jigg for å produsere mange rammer effektivt.</p></div>
+</div></dialog>
 <footer class="wrap">© Mats Ugland</footer>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  function stepper(track, prev, next, gap){
+    function item(){return track.firstElementChild}
+    function update(){var max=track.scrollWidth-track.clientWidth-2;prev.hidden=track.scrollLeft<=2;next.hidden=track.scrollLeft>=max;}
+    prev.addEventListener('click',function(){track.scrollBy({left:-(item().getBoundingClientRect().width+gap),behavior:rm})});
+    next.addEventListener('click',function(){track.scrollBy({left:item().getBoundingClientRect().width+gap,behavior:rm})});
+    track.addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
+    return update;
+  }
+  var car=document.querySelector('.mcar');
+  if(car)stepper(car.querySelector('.mtrack'),car.querySelector('.prev'),car.querySelector('.next'),40);
+  document.querySelectorAll('.mcard').forEach(function(btn){
+    var d=document.getElementById(btn.dataset.open); if(!d)return;
+    var g=d.querySelector('.gal'), upd=stepper(g.querySelector('.gtrack'),g.querySelector('.prev'),g.querySelector('.next'),16);
+    btn.addEventListener('click',function(){d.showModal();g.querySelector('.gtrack').scrollLeft=0;upd();});
+    d.querySelector('.close').addEventListener('click',function(){d.close()});
+    d.addEventListener('click',function(e){if(e.target===d)d.close()});
+    d.querySelectorAll('.gtrack img').forEach(function(i){i.addEventListener('load',upd)});
+  });
+})();
+</script>
 </body>
 </html>
