@@ -85,7 +85,124 @@ footer{padding-block:64px;font-size:15px}
   .cv .t.nw{white-space:normal}
   .cv .gap{margin-top:22px}
 }
-.proj{max-width:none;padding-inline:16px}</style>
+.proj{max-width:none;padding-inline:16px}
+
+
+
+
+/* Case pages with a numbered process */
+.case{max-width:1180px;margin:0 auto;padding-block:48px 24px;color:#000}
+.case h2{font-size:clamp(26px,2.6vw,34px);font-weight:600;margin:0 0 24px;line-height:1.2;text-wrap:balance;max-width:28ch}
+.case p{font-size:15px;line-height:1.65;margin:0 0 12px;max-width:62ch}
+.case b{font-weight:600}
+.case a.inline{color:var(--ink);font-weight:600;border-bottom:2px solid var(--ink)}
+.case a.inline:hover{border-bottom-width:4px}
+.case figure{margin:0}
+.case figcaption{font-size:13px;font-style:italic;margin-top:8px;color:#000}
+.eyebrow{font-size:13px!important;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 8px!important}
+.hint{font-size:13px!important;font-style:italic;color:var(--ink);margin:0 0 8px!important}
+.hint::before{content:"↓ ";font-style:normal}
+.c-sec{margin-top:104px}
+.c-head{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:32px 40px;align-items:start}
+.c-head h1{font-size:clamp(56px,8vw,112px);line-height:1.05;font-weight:700;color:var(--ink);margin:0;text-wrap:balance}
+.facts{position:relative;width:520px;height:250px;margin:8px 0 0;padding:0;list-style:none}
+.facts li{position:absolute;display:grid;grid-template-columns:68px 160px;column-gap:14px;align-items:start}
+.facts .f1{left:46px;top:0}.facts .f2{left:0;top:132px}.facts .f3{left:262px;top:110px}
+.facts img{width:68px;height:68px;object-fit:contain}
+.facts b{display:block;font-size:22px;font-weight:600;line-height:1.2;margin-bottom:4px}
+.facts span{display:block;font-size:13px;line-height:1.45}
+.c-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center;margin-top:80px}
+.c-intro .lede{font-size:18px;line-height:1.55;margin-bottom:28px}
+.c-intro h2{font-size:22px;margin:0 0 8px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:88px}
+.step{display:grid;grid-template-columns:56px minmax(0,5fr) minmax(0,6fr);gap:0 40px;align-items:start}
+.step .num{width:40px;height:40px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20fill%3D%22%23000%22%20d%3D%22M20%201.5a18.5%2018.5%200%201%201%200%2037a18.5%2018.5%200%201%201%200-37zM21.3%204.6a15.4%2015.6%200%201%200%200%2031.2a15.4%2015.6%200%201%200%200-31.2z%22/%3E%3C/svg%3E") center/contain no-repeat;color:var(--ink);display:grid;place-items:center;font-weight:600;font-size:19px;line-height:1;margin-top:2px}
+.step h3{font-size:22px;font-weight:600;margin:6px 0 12px;line-height:1.3;text-wrap:balance}
+.step .media{grid-column:3}
+.step.wide{grid-template-columns:56px minmax(0,1fr)}
+.step.wide .media{grid-column:2;margin-top:24px}
+.decision{margin-top:18px;background:#f4eea8;border-radius:12px;padding:14px 18px;max-width:62ch}
+.decision p{font-size:14.5px;margin:0}
+.decision p+p,.decision p+ul{margin-top:8px}
+.lbl{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:8px}
+.changes{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.changes li{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;font-size:14px;line-height:1.45;align-items:start}
+.changes .arrow{color:var(--ink);font-weight:600}
+.shot{display:block;width:100%;height:auto;border:1.5px solid #000;background:#fff}
+.free{display:block;width:100%;height:auto}
+.stack{display:grid;gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.us{display:grid;gap:14px}
+.us blockquote{margin:0;border:2px solid var(--ink);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55}
+.us blockquote b{display:block;color:var(--ink);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.hs{position:relative}
+.hs .track{position:relative;display:flex;gap:var(--gap,0px);overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#03045e55 transparent;padding-bottom:10px}
+.hs .track img{flex:none;height:var(--h,520px);width:auto;max-width:none}
+/* full-bleed: the strip runs to the window edges, first image lines up with the text */
+.hs.bleed{--edge:max(24px,calc(50vw - 590px));margin-inline:calc(50% - 50vw)}
+.hs.bleed .track{padding-inline:var(--edge)}
+.hs.bleed .prev{left:max(8px,calc(var(--edge) - 24px))}.hs.bleed .next{right:max(8px,calc(var(--edge) - 24px))}
+.hs .nav{position:absolute;top:calc(var(--h,520px)/2 - 24px);width:48px;height:48px;border-radius:50%;border:3px solid var(--ink);background:var(--bg);color:var(--ink);font:600 20px/1 Poppins,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s;z-index:2}
+.hs .nav:hover{background:var(--ink);color:var(--bg)}
+.hs .nav[hidden]{display:none}
+.proto{display:block}
+.proto img{display:block;width:100%;height:auto;transition:transform .2s}
+.proto:hover img{transform:scale(1.01)}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 40px;margin-top:40px}
+.features h3{font-size:18px;font-weight:600;margin:0 0 6px}
+.features p{font-size:14px;margin:0}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:8px}
+.trio figcaption{font-style:normal;font-weight:500}
+.step.wide .decision{max-width:none}
+.bp-wrap{overflow-x:auto;margin-top:8px}
+.bp{border-collapse:collapse;width:100%;min-width:760px;font-size:14px;line-height:1.45}
+.bp th,.bp td{border:1px solid #000;padding:12px 14px;vertical-align:top;text-align:left}
+.bp thead th{font-weight:600;background:#f4eea8}
+.bp tbody th{font-weight:600;width:150px;background:#f4eea8}
+.bp td:empty{background:repeating-linear-gradient(135deg,transparent 0 8px,#00000008 8px 16px)}
+.bp tr.line td{border:0;border-top:3px dashed #000;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:none}
+.comic{display:grid;grid-template-columns:1.5fr .81fr .73fr 1.44fr;gap:20px;align-items:start;margin-top:8px}
+.comic figure{display:grid;grid-template-rows:240px auto;gap:12px}
+.comic img{width:100%;height:240px;object-fit:contain;object-position:bottom}
+.comic figcaption{font-style:normal;font-size:14px;line-height:1.5;align-self:start}
+.ws{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px 56px;align-items:start}
+.ws .media{display:grid;gap:20px}
+.trio.phones{max-width:760px}
+.closing{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
+.quotes{display:grid;gap:12px}
+.quotes li{display:grid;gap:4px;border:2px solid var(--ink);border-radius:12px;padding:12px 16px;list-style:none}
+.quotes q{font-style:italic;font-size:14px}
+.quotes span{font-size:14px}
+.quotes ul{margin:0;padding:0;display:grid;gap:12px}
+.backnav{display:flex;flex-wrap:wrap;gap:16px;margin-top:112px;padding-top:32px;border-top:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:3px solid var(--ink);border-radius:28px;padding:10px 22px;font-weight:600;font-size:16px;color:var(--ink);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+@media (prefers-reduced-motion:reduce){.proto img{transition:none}}
+@media (max-width:900px){
+  .c-head{grid-template-columns:1fr}
+  .facts{position:static;width:auto;height:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .facts li{position:static;grid-template-columns:56px minmax(0,1fr)}
+  .facts img{width:56px;height:56px}
+  .c-intro,.closing{grid-template-columns:1fr;gap:32px}
+  .step{grid-template-columns:48px minmax(0,1fr);gap:0 20px}
+  .step .media{grid-column:1/-1;margin-top:20px}
+  .features{grid-template-columns:1fr 1fr}
+  .ws{grid-template-columns:1fr;gap:28px}
+  .comic{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .facts{grid-template-columns:1fr;gap:18px}
+  .c-sec{margin-top:72px}
+  .steps{gap:64px}
+  .hs .track img{height:var(--hm,300px)}
+  .hs .nav{display:none}
+  .features,.trio,.grid2{grid-template-columns:1fr}
+  .comic{grid-template-columns:1fr}
+  .comic figure{grid-template-rows:auto auto}.comic img{height:auto}
+  .changes li{grid-template-columns:1fr;gap:2px}
+  .changes .arrow{display:none}
+}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
 </head>
 <body>
 <nav class="top"><div class="wrap">
@@ -96,36 +213,38 @@ footer{padding-block:64px;font-size:15px}
     <a class="ml" href="mailto:uglandmats@gmail.com" aria-label="E-post: uglandmats@gmail.com" title="uglandmats@gmail.com"><img src="img/ikon-epost.svg" alt=""></a>
     <a class="li" href="https://www.linkedin.com/in/mats-ugland/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/ikon-linkedin.svg" alt=""></a>
   </div>
-</div></nav><main class="wrap proj"><div class="cv" data-w="1292" style="width:1292px;height:4198px">
-<h1 class="it t h" style="left:24px;top:56.0px;width:631.8px;order:0;font-size:120.4px;font-weight:700;text-align:left;color:#03045e;--ps:0px;--ms:70px;line-height:111%;">Campus workshop</h1>
-<div class="it i mh" style="left:656px;top:70.4px;width:136.0px;order:1;height:91.0px;--mw:136px;"><img src="img/workshops-01.webp" alt="" loading="lazy"></div>
-<div class="it t h nw gap" style="left:807.9px;top:75.3px;width:62px;order:2;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Jobb</div>
-<div class="it t" style="left:808.2px;top:118.8px;width:224px;order:3;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Jeg var med på å planlegge og gjennomføre workshopserien da jeg jobbet i campusprogrammet ved OsloMet</div>
-<div class="it i mh" style="left:776px;top:242.3px;width:80.0px;order:4;height:84.0px;--mw:80px;"><img src="img/politiet-i-lomma-01.webp" alt="" loading="lazy"></div>
-<div class="it t h nw" style="left:869.9px;top:226.3px;width:71px;order:5;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Team</div>
-<div class="it t" style="left:870px;top:266.3px;width:329px;order:6;font-size:12px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:12px;">Prosjektet ble gjennomført av campusprogrammet og konsulenter fra Ratio Arkitekter. Teamet besto av:<br>Solveig Dahl Grue, Andreas Fardal, Kristin Nordseth,<br>Mona Dahl, Victor Bratli Larsson, Hildegunn Haugen (Ratio) og Borghild Holsvik (Ratio)</div>
-<h2 class="it t h nw gap" style="left:28px;top:437.3px;width:310px;order:7;font-size:36px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:28px;">Bakgrunn</h2>
-<div class="it t j" style="left:28px;top:508.2px;width:411.2px;order:8;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:13px;--ms:15px;">Jeg jobbet i 2023-2025 med campusutvikling på OsloMet. Et av hovedprosjektene jeg har bidratt til er en ny campusutviklingsplan, der jeg har vært med på å planlegge og gjennomføre workshops med ulike brukergrupper. Metodikken har mye til felles med designprosesser, og to workshops har vært spesielt lærerike for hvordan jeg tenker om deltakelse og prioritering.</div>
-<div class="it i " style="left:525px;top:464.7px;width:743px;order:9;height:321px;--mw:743px;"><img src="img/workshops-02.webp" alt="Mats legger frem kartleggingsrapporten under en workshop" loading="lazy"></div>
-<div class="it t j  itl" style="left:525px;top:788.7px;width:743px;order:10;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Gjennom workshopserien hadde jeg rolle som konfransier/møteleder. I dette bildet legger jeg frem en kartleggingsrapport jeg utarbeidet som grunnlag for de første workshopene.</div>
-<h2 class="it t h nw gap" style="left:24px;top:967.7px;width:310px;order:11;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">"Campus-spillet"</h2>
-<div class="it t j" style="left:24px;top:1024.7px;width:420.9px;order:12;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Å beskrive hva man ønsker seg er enkelt. Å prioritere det er vanskelig. Spesielt på en campus der plass til noe nytt betyr at noe annet må vike.</div>
-<div class="it i " style="left:582px;top:896.7px;width:686px;order:13;height:439px;--mw:686px;"><img src="img/workshops-03.webp" alt="Campus-spillet: brett med arealbrikker og tusjer" loading="lazy"></div>
-<div class="it t j" style="left:28px;top:1272.7px;width:420.9px;order:14;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Vi laget en øvelse der ulike brukergrupper fikk omfordele campusarealer seg imellom, for å synliggjøre hva de egentlig prioriterte når de måtte velge bort noe.</div>
-<div class="it i " style="left:24px;top:1523.7px;width:587px;order:15;height:374px;--mw:587px;"><img src="img/workshops-04.webp" alt="Deltakere spiller campus-spillet" loading="lazy"></div>
-<div class="it t j" style="left:684px;top:1523.7px;width:420.9px;order:16;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Responsen var delt. Noen opplevde oppgaven som urettferdig og trakk seg før den startet. De som ble, beskrev det som befriende å endelig få snakke åpent om prioriteringer og øvelsen ga innsikt i hverandres situasjon på tvers av grupper.</div>
-<div class="it t j" style="left:684px;top:1811.7px;width:420.9px;order:17;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Det jeg sitter igjen med er hvor mye motstand som kan oppstå når man gjør prioriteringer eksplisitte i stedet for abstrakte og at den motstanden ofte er et tegn på at man er inne på noe reelt.</div>
-<h2 class="it t h nw gap" style="left:24px;top:2052.7px;width:310px;order:18;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">"Hjemmebase"</h2>
-<div class="it t j" style="left:24px;top:2118.7px;width:420.9px;order:19;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Gjennom arbeidet med campusliv så vi at mange studenter mangler et sted de føler tilhørighet til, en «hjemmebase». Målet med denne workshopen var å forstå hva en slik hjemmebase burde inneholde, og for hvem.</div>
-<div class="it i " style="left:678.3px;top:2045.7px;width:589.7px;order:20;height:417px;--mw:590px;"><img src="img/workshops-05.webp" alt="Oppgaveark om fysisk nærhet" loading="lazy"></div>
-<div class="it i " style="left:24px;top:2286.7px;width:408px;order:21;height:577px;--mw:408px;"><img src="img/workshops-06.webp" alt="Oppgaveark om hvem man deler med: Andre institusjoner, OsloMet, Fakultet, Institutt, Studieprogram, Klasse, Student" loading="lazy"></div>
-<div class="it t j" style="left:677.9px;top:2535.3px;width:590px;order:22;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Deltakerne jobbet med to gjennomgående spørsmål: hva bør ligge nært, og hva bør være eksklusivt for enkelte grupper fremfor delt av alle. Svarene varierte mye mellom fagmiljøer: mindre, nisjepregede programmer ønsket en sterk lokal identitet, mens større programmer var mer åpne for å dele rom på et høyere nivå.</div>
-<div class="it t j" style="left:24px;top:2938.7px;width:420.9px;order:23;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Det ga meg en tydeligere forståelse av at det ikke finnes én riktig løsning på tilhørighet. Det viktigste jeg tar med meg som designer er å kjenne forskjellen på når jeg bør designe en løsning, og når jobben min heller er å legge til rette for at brukerne designer sin egen.</div>
-<h2 class="it t h nw gap" style="left:24px;top:3140px;width:760px;order:24;font-size:36px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:28px;">Resultat</h2>
-<div class="it t j" style="left:24px;top:3215px;width:760px;order:25;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:13px;--ms:15px;"><p>Totalt holdt vi åtte workshops i tre serier, med mellom 15 og 40 deltakere hver gang. Innspillene ble en del av campusutviklingsplanen, blant annet flere områder avsatt til ulike studentgrupper og flere uformelle studentarealer.</p><p>Den største effekten var kanskje likevel hos deltakerne selv. Folk med ansvar for ulike deler av campus begynte å tenke annerledes om hvordan de bruker arealene, hvordan studentene deres opplever campus, og hva andre i organisasjonen har og trenger.</p></div>
-<div class="it i " style="left:89px;top:3436.7px;width:1114px;order:26;height:721px;--mw:1114px;"><img src="img/workshops-07.webp" alt="Utfylt oppgaveark fra Hjemmebase-workshopen" loading="lazy"></div>
-</div></main><script>
-(function(){var c=document.querySelectorAll('.cv');function f(){c.forEach(function(e){var w=+e.dataset.w,a=document.documentElement.clientWidth-32;e.style.setProperty('--z',window.matchMedia('(max-width:760px)').matches?1:Math.min(1,a/w));});}f();addEventListener('resize',f);})();
+</div></nav><main class="wrap">
+<article class="case">
+<header class="c-head" id="top"><h1>Campus-workshops</h1>
+<ul class="facts"><li class="f1"><img src="img/workshops-01.webp" alt=""><div><b>Jobb</b><span>Campusprogrammet ved OsloMet</span></div></li><li class="f2"><img src="img/politiet-i-lomma-02.webp" alt=""><div><b>Varighet</b><span>2023–2025</span></div></li><li class="f3"><img src="img/politiet-i-lomma-01.webp" alt=""><div><b>Team</b><span>Campusprogrammet og konsulenter fra Ratio Arkitekter</span></div></li></ul>
+</header>
+<section class="c-intro" aria-label="Om prosjektet"><div><p class="lede">Hvordan får man studenter, ansatte og ledelse til å <b>prioritere sammen</b>, når plass til noe nytt betyr at noe annet må vike?</p><h2>Min rolle</h2><p>Jeg jobbet med campusutvikling på OsloMet og var med på å planlegge og gjennomføre workshopene til den nye campusutviklingsplanen. Jeg var <b>konferansier og møteleder</b>, og jeg laget <b>kartleggingsrapporten</b> som var grunnlaget for de første workshopene.</p></div><figure><img class="free" src="img/workshops-02.webp" alt="Mats legger frem kartleggingsrapporten under en workshop" width="1486" height="642" loading="lazy"><figcaption>Jeg legger frem kartleggingsrapporten.</figcaption></figure></section>
+<section class="c-sec " aria-labelledby="serien"><p class="eyebrow">Slik jobbet vi</p><h2 id="serien">Åtte workshops i tre serier, og to av dem viser jeg her</h2><p>Til sammen holdt vi <b>åtte workshops i tre serier</b>, med mellom 15 og 40 deltakere hver gang: studenter, ansatte, fagpersoner og ledelse.</p><p>Under viser jeg <b>to workshops som var særlig lærerike</b>, hver med sin egen metode: ett spill som gjorde prioriteringer synlige, og en oppgave om hva som gir studenter tilhørighet. Begge kan spores i den ferdige Campusutviklingsplan for OsloMet 2026–2036.</p></section>
+<section class="c-sec" aria-labelledby="spillet"><p class="eyebrow">Workshop 1 · Campus-spillet</p><h2 id="spillet">Et spill tvang fram prioriteringer som ellers forblir abstrakte</h2><div class="ws"><div><p>Å beskrive hva man ønsker seg er enkelt. Å prioritere det er vanskelig, særlig på en campus der plass til noe nytt betyr at noe annet må vike.</p><p>Vi laget <b>Campus-spillet</b>, der ulike brukergrupper fikk omfordele campusarealer seg imellom. Responsen var delt. Noen opplevde oppgaven som urettferdig og trakk seg. De som ble, beskrev det som <b>befriende å endelig snakke åpent om prioriteringer</b>, og fikk innsikt i hverandres situasjon.</p><div class="decision"><p><span class="lbl">Læring</span>Motstand mot eksplisitte prioriteringer er ofte <b>et tegn på at man er inne på noe reelt</b>, ikke et tegn på at øvelsen feilet.</p></div><div class="decision"><p><span class="lbl">I planen</span>Den ferdige planen beskriver den samme avveiningen: å holde studentene nær sin hjemmebase <b>krever flere undervisningsrom</b>, så hvert tiltak må balansere mål, ressurser og konsekvenser for andre (kapittel 3.3, God arealbruk).</p></div></div><div class="media"><img class="free" src="img/workshops-03.webp" alt="Campus-spillet: brett med arealbrikker og tusjer" width="1372" height="878" loading="lazy"><img class="free" src="img/workshops-04.webp" alt="Deltakere spiller campus-spillet" width="1174" height="748" loading="lazy"></div></div></section>
+<section class="c-sec" aria-labelledby="hjemmebase"><p class="eyebrow">Workshop 2 · Hjemmebase</p><h2 id="hjemmebase">Tilhørighet betyr noe annet for små fagmiljøer enn for store</h2><div class="ws"><div><p>Gjennom arbeidet med campusliv så vi at mange studenter mangler et sted de føler tilhørighet til, en «hjemmebase». Deltakerne jobbet med to spørsmål: <b>hva bør ligge nært</b>, og <b>hva bør være eksklusivt</b> for enkelte grupper fremfor delt av alle.</p><p>Svarene varierte mye. <b>Mindre programmer ønsket en sterk lokal identitet</b>, mens større programmer var mer åpne for å dele rom på et høyere nivå.</p><div class="decision"><p><span class="lbl">Læring</span>Som designer må jeg kjenne forskjellen på <b>når jeg skal designe en løsning</b>, og når jobben er å <b>legge til rette for at brukerne designer sin egen</b>.</p></div><div class="decision"><p><span class="lbl">I planen</span>Hjemmebaser er blitt kjernen i satsingsområdet <b>«Styrket tilhørighet»</b>. Planen sier at hjemmebaser kan overlappe, slik at flere fagmiljøer deler bibliotek, kantine og undervisningsrom, og at hver hjemmebase skal utformes i samarbeid med fagmiljøet (kapittel 3.1).</p></div></div><div class="media"><img class="free" src="img/workshops-05.webp" alt="Oppgaveark om fysisk nærhet" width="1180" height="834" loading="lazy"><figure><img class="free" src="img/workshops-plan-hjemmebaser.webp" alt="Kart over Campus Pilestredet med de planlagte studenthjemmebasene" width="1600" height="1970" loading="lazy" style="max-width:520px"><figcaption>Hjemmebasene i den ferdige planen. Kart fra Campusutviklingsplan for OsloMet 2026–2036.</figcaption></figure></div></div></section>
+<section class="c-sec closing" aria-labelledby="resultat"><div><p class="eyebrow">Resultat</p><h2 id="resultat">Innspillene ble en del av campusutviklingsplanen</h2><p>Innspillene fra workshopene ble en del av Campusutviklingsplan for OsloMet 2026–2036, blant annet <b>flere områder avsatt til ulike studentgrupper</b> og flere uformelle studentarealer.</p><p>Den største effekten var kanskje hos deltakerne selv. Folk med ansvar for ulike deler av campus begynte å <b>tenke annerledes om hvordan studentene opplever campus</b>, og hva andre i organisasjonen har og trenger.</p></div><figure><img class="shot" src="img/workshops-07.webp" alt="Utfylt oppgaveark fra Hjemmebase-workshopen" width="2228" height="1442" loading="lazy"></figure></section>
+<nav class="backnav" aria-label="Videre"><a class="btn" href="#top"><span aria-hidden="true">↑</span> Til toppen</a><a class="btn" href="./#prosjekter"><span aria-hidden="true">←</span> Tilbake til prosjekter</a></nav>
+</article>
+</main>
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  document.querySelectorAll('.hs').forEach(function(h){
+    var t=h.querySelector('.track'),p=h.querySelector('.prev'),n=h.querySelector('.next');
+    // each arrow press moves to the start of the next or previous image
+    function stops(){var pad=parseFloat(getComputedStyle(t).paddingLeft)||0,max=t.scrollWidth-t.clientWidth;
+      return Array.prototype.map.call(t.querySelectorAll('img'),function(i){return Math.min(max,Math.max(0,i.offsetLeft-pad))});}
+    function go(dir){var x=t.scrollLeft,s=stops(),target=null;
+      if(dir>0){for(var k=0;k<s.length;k++){if(s[k]>x+4){target=s[k];break}} if(target===null)target=t.scrollWidth;}
+      else{for(var k=s.length-1;k>=0;k--){if(s[k]<x-4){target=s[k];break}} if(target===null)target=0;}
+      t.scrollTo({left:target,behavior:rm});}
+    function upd(){p.hidden=t.scrollLeft<=2;n.hidden=t.scrollLeft>=t.scrollWidth-t.clientWidth-2}
+    p.addEventListener('click',function(){go(-1)});
+    n.addEventListener('click',function(){go(1)});
+    t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+    t.querySelectorAll('img').forEach(function(i){i.addEventListener('load',upd)});upd();
+  });
+})();
 </script>
 <footer class="wrap">© Mats Ugland</footer>
 </body>

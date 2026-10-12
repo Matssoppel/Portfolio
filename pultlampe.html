@@ -109,12 +109,23 @@ footer{padding-block:64px;font-size:15px}
 
 
 
+
+
+
+
+
 /* Case pages with a numbered process */
 .case{max-width:1180px;margin:0 auto;padding-block:48px 24px;color:#000}
-.case h2{font-size:clamp(28px,3vw,36px);font-weight:600;margin:0 0 20px;line-height:1.2;text-wrap:balance}
+.case h2{font-size:clamp(26px,2.6vw,34px);font-weight:600;margin:0 0 24px;line-height:1.2;text-wrap:balance;max-width:28ch}
 .case p{font-size:15px;line-height:1.65;margin:0 0 12px;max-width:62ch}
+.case b{font-weight:600}
+.case a.inline{color:var(--ink);font-weight:600;border-bottom:2px solid var(--ink)}
+.case a.inline:hover{border-bottom-width:4px}
 .case figure{margin:0}
 .case figcaption{font-size:13px;font-style:italic;margin-top:8px;color:#000}
+.eyebrow{font-size:13px!important;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 8px!important}
+.hint{font-size:13px!important;font-style:italic;color:var(--ink);margin:0 0 8px!important}
+.hint::before{content:"↓ ";font-style:normal}
 .c-sec{margin-top:104px}
 .c-head{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:32px 40px;align-items:start}
 .c-head h1{font-size:clamp(56px,8vw,112px);line-height:1.05;font-weight:700;color:var(--ink);margin:0;text-wrap:balance}
@@ -126,16 +137,25 @@ footer{padding-block:64px;font-size:15px}
 .facts span{display:block;font-size:13px;line-height:1.45}
 .c-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center;margin-top:80px}
 .c-intro .lede{font-size:18px;line-height:1.55;margin-bottom:28px}
-.c-intro h2{font-size:24px;margin:0 0 8px}
+.c-intro h2{font-size:22px;margin:0 0 8px}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:88px}
 .step{display:grid;grid-template-columns:56px minmax(0,5fr) minmax(0,6fr);gap:0 40px;align-items:start}
 .step .num{width:40px;height:40px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20fill%3D%22%23000%22%20d%3D%22M20%201.5a18.5%2018.5%200%201%201%200%2037a18.5%2018.5%200%201%201%200-37zM21.3%204.6a15.4%2015.6%200%201%200%200%2031.2a15.4%2015.6%200%201%200%200-31.2z%22/%3E%3C/svg%3E") center/contain no-repeat;color:var(--ink);display:grid;place-items:center;font-weight:600;font-size:19px;line-height:1;margin-top:2px}
-.step h3{font-size:24px;font-weight:600;margin:6px 0 12px;line-height:1.25}
+.step h3{font-size:22px;font-weight:600;margin:6px 0 12px;line-height:1.3;text-wrap:balance}
 .step .media{grid-column:3}
 .step.wide{grid-template-columns:56px minmax(0,1fr)}
-.step.wide .media{grid-column:1/-1;margin-top:24px}
+.step.wide .media{grid-column:2;margin-top:24px}
+.decision{margin-top:18px;background:#f4eea8;border-radius:12px;padding:14px 18px;max-width:62ch}
+.decision p{font-size:14.5px;margin:0}
+.decision p+p,.decision p+ul{margin-top:8px}
+.lbl{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:8px}
+.changes{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.changes li{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;font-size:14px;line-height:1.45;align-items:start}
+.changes .arrow{color:var(--ink);font-weight:600}
 .shot{display:block;width:100%;height:auto;border:1.5px solid #000;background:#fff}
 .free{display:block;width:100%;height:auto}
+.stack{display:grid;gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .us{display:grid;gap:14px}
 .us blockquote{margin:0;border:2px solid var(--ink);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55}
 .us blockquote b{display:block;color:var(--ink);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
@@ -148,19 +168,40 @@ footer{padding-block:64px;font-size:15px}
 .hs.bleed .prev{left:max(8px,calc(var(--edge) - 24px))}.hs.bleed .next{right:max(8px,calc(var(--edge) - 24px))}
 .hs .nav{position:absolute;top:calc(var(--h,520px)/2 - 24px);width:48px;height:48px;border-radius:50%;border:3px solid var(--ink);background:var(--bg);color:var(--ink);font:600 20px/1 Poppins,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s;z-index:2}
 .hs .nav:hover{background:var(--ink);color:var(--bg)}
-.hs .prev{left:-10px}.hs .next{right:-10px}
 .hs .nav[hidden]{display:none}
-.hs-hint{font-size:13px;font-style:italic;margin-top:6px}
-.solution .proto{display:block;margin-top:8px}
-.solution .proto img{display:block;width:100%;height:auto;transition:transform .2s}
-.solution .proto:hover img{transform:scale(1.01)}
+.proto{display:block}
+.proto img{display:block;width:100%;height:auto;transition:transform .2s}
+.proto:hover img{transform:scale(1.01)}
 .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 40px;margin-top:40px}
 .features h3{font-size:18px;font-weight:600;margin:0 0 6px}
 .features p{font-size:14px;margin:0}
 .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:8px}
 .trio figcaption{font-style:normal;font-weight:500}
+.step.wide .decision{max-width:none}
+.bp-wrap{overflow-x:auto;margin-top:8px}
+.bp{border-collapse:collapse;width:100%;min-width:760px;font-size:14px;line-height:1.45}
+.bp th,.bp td{border:1px solid #000;padding:12px 14px;vertical-align:top;text-align:left}
+.bp thead th{font-weight:600;background:#f4eea8}
+.bp tbody th{font-weight:600;width:150px;background:#f4eea8}
+.bp td:empty{background:repeating-linear-gradient(135deg,transparent 0 8px,#00000008 8px 16px)}
+.bp tr.line td{border:0;border-top:3px dashed #000;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:none}
+.comic{display:grid;grid-template-columns:1.5fr .81fr .73fr 1.44fr;gap:20px;align-items:start;margin-top:8px}
+.comic figure{display:grid;grid-template-rows:240px auto;gap:12px}
+.comic img{width:100%;height:240px;object-fit:contain;object-position:bottom}
+.comic figcaption{font-style:normal;font-size:14px;line-height:1.5;align-self:start}
+.ws{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px 56px;align-items:start}
+.ws .media{display:grid;gap:20px}
+.trio.phones{max-width:760px}
 .closing{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
-@media (prefers-reduced-motion:reduce){.solution .proto img{transition:none}}
+.quotes{display:grid;gap:12px}
+.quotes li{display:grid;gap:4px;border:2px solid var(--ink);border-radius:12px;padding:12px 16px;list-style:none}
+.quotes q{font-style:italic;font-size:14px}
+.quotes span{font-size:14px}
+.quotes ul{margin:0;padding:0;display:grid;gap:12px}
+.backnav{display:flex;flex-wrap:wrap;gap:16px;margin-top:112px;padding-top:32px;border-top:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:3px solid var(--ink);border-radius:28px;padding:10px 22px;font-weight:600;font-size:16px;color:var(--ink);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+@media (prefers-reduced-motion:reduce){.proto img{transition:none}}
 @media (max-width:900px){
   .c-head{grid-template-columns:1fr}
   .facts{position:static;width:auto;height:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -170,6 +211,8 @@ footer{padding-block:64px;font-size:15px}
   .step{grid-template-columns:48px minmax(0,1fr);gap:0 20px}
   .step .media{grid-column:1/-1;margin-top:20px}
   .features{grid-template-columns:1fr 1fr}
+  .ws{grid-template-columns:1fr;gap:28px}
+  .comic{grid-template-columns:1fr 1fr}
 }
 @media (max-width:560px){
   .facts{grid-template-columns:1fr;gap:18px}
@@ -177,7 +220,11 @@ footer{padding-block:64px;font-size:15px}
   .steps{gap:64px}
   .hs .track img{height:var(--hm,300px)}
   .hs .nav{display:none}
-  .features,.trio{grid-template-columns:1fr}
+  .features,.trio,.grid2{grid-template-columns:1fr}
+  .comic{grid-template-columns:1fr}
+  .comic figure{grid-template-rows:auto auto}.comic img{height:auto}
+  .changes li{grid-template-columns:1fr;gap:2px}
+  .changes .arrow{display:none}
 }
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
 </head>
@@ -192,50 +239,14 @@ footer{padding-block:64px;font-size:15px}
   </div>
 </div></nav><main class="wrap">
 <article class="case">
-<header class="c-head"><h1>Ampær</h1>
+<header class="c-head" id="top"><h1>Ampær</h1>
 <ul class="facts"><li class="f1"><img src="img/politiet-i-lomma-01.webp" alt=""><div><b>Gruppeprosjekt</b><span>Med Andreas Selnes og Victoria Phan</span></div></li><li class="f2"><img src="img/politiet-i-lomma-02.webp" alt=""><div><b>Varighet</b><span>11 uker, høsten 2021</span></div></li><li class="f3"><img src="img/snakk-til-meg-02.webp" alt=""><div><b>Skoleprosjekt</b><span>Kritisk refleksjon i designpraksis ved OsloMet</span></div></li></ul>
 </header>
-
-<section class="c-intro" aria-labelledby="om">
- <div>
-  <h2 id="om" class="visually-hidden">Om prosjektet</h2>
-  <p class="lede">Under pandemien skrudde mange av kameraet i videomøter og skyldte på rotete rom eller dårlig lys. Ampær er en skrivebordslampe som kan lyse opp både ansiktet og arbeidsflaten, så du fremstår mer presentabel og trygg i digitale møter.</p>
-  <h2>Min rolle</h2>
-  <p>Konseptet vi landet på, bygget på mine skisser og idéer, som vokste frem gjennom arbeidet i gruppen. Jeg sto for all CAD-modellering og alle renderinger. Prosjektet fikk toppkarakter og god tilbakemelding.</p>
- </div>
- <figure><img class="free" src="img/pultlampe-01.webp" alt="Tre versjoner av Ampær-lampen" width="1880" height="1228"></figure>
-</section>
-
-<section class="c-sec" aria-labelledby="prosess">
- <h2 id="prosess">Slik jobbet vi</h2>
- <ol class="steps">
- <li class="step"><span class="num" aria-hidden="true">1</span><div><h3><span class="visually-hidden">Steg 1: </span>Forstå problemet</h3><p>Vi besøkte Glamox-fabrikken på Kirkenær og satte oss inn i hva som gir godt lys på hjemmekontoret: lite kontrast og skygger, ingen gjenskinn i skjermen og en egen lyskilde til det du jobber med. Videomøter feiler typisk på motlys, skygger fra taklys og overeksponering.</p></div><div class="media"><img class="free" src="img/pultlampe-videomoter.webp" alt="Fire videomøter: motlys fra vinduet, skygger fra taklys, overeksponert, og jevnt godt lys" width="1216" height="816" loading="lazy"></div></li>
- <li class="step"><span class="num" aria-hidden="true">2</span><div><h3><span class="visually-hidden">Steg 2: </span>Første brukertest</h3><p>Vi satte opp et hjemmekontor med en L-1-lampe der lysstyrke og fargetemperatur kunne justeres, og ba brukerne stille inn lyset slik de ville se ut i et videomøte.</p><p>Ingen rettet lyset rett mot ansiktet, og da vi trakk fra gardinene, mente de at lampen ikke gjorde noen forskjell. Løsningen måtte altså være fleksibel, ikke bare et sterkt lys mot ansiktet.</p></div><div class="media"><img class="free" src="img/pultlampe-brukertest-l1.webp" alt="Brukertest med en L-1-lampe ved et skrivebord" width="1347" height="700" loading="lazy"></div></li>
- <li class="step wide"><span class="num" aria-hidden="true">3</span><div><h3><span class="visually-hidden">Steg 3: </span>Utforske og velge</h3><p>Vi skisserte bredt: lys festet til PC-skjermen, ringlys med kamera, lys gjemt i pulten, magnetlamper og mye mer. De fleste sporene ble forkastet underveis, og ringlyset som kan brettes ut, ble til slutt til to lyspaneler.</p><p>Til slutt veide vi en L-1-lampe med ringlys mot foldelampen med to paneler. L-1-varianten var gjenkjennelig, men lite nytenkende og vanskelig å få til å fungere. Foldelampen var original og fleksibel, så vi valgte den.</p></div><div class="media"><div class="hs bleed" style="--h:520px;--hm:300px;--gap:0px"><button type="button" class="nav prev" aria-label="Bla tilbake" hidden>←</button><div class="track" tabindex="0" role="region" aria-label="Skissetidslinje"><img src="img/pultlampe-skisser-1.webp" alt="Skisser: hva vil vi jobbe med? Fra boklansering og hologram til lys for nettmøter" width="1287" height="845" decoding="async"><img src="img/pultlampe-skisser-2.webp" alt="Skisser av forkastede konsepter: lys festet i PC-skjermen, ringlys med kamera, laptop-klips og lys gjemt i pulten" width="1287" height="845" decoding="async"><img src="img/pultlampe-skisser-3.webp" alt="Skisser av videre konsepter: magnetlamper, Makaronien, Snusboksen og Sminkeskrinet" width="1287" height="845" decoding="async"><img src="img/pultlampe-skisser-4.webp" alt="Mange blir til to: ringlyset som kan brettes ut, blir til to lyspaneler" width="1287" height="845" decoding="async"></div><button type="button" class="nav next" aria-label="Bla videre" hidden>→</button></div><p class="hs-hint">Skissene står som én tidslinje. Bla sidelengs for å følge utviklingen.</p></div></li>
- <li class="step"><span class="num" aria-hidden="true">4</span><div><h3><span class="visually-hidden">Steg 4: </span>Eksperimentere og bygge</h3><p>Vi testet lysspredning med en tavle med LED-striper og ulike materialer. Avstanden til lyskilden betydde mer enn materialet, og vi landet på 0,5 mm hvit PMMA.</p><p>Fra en modell i furu gikk vi videre til 3D-printede prototyper som jeg modellerte i Fusion 360, med LED-lys som kan justere både lysstyrke og fargetemperatur.</p></div><div class="media"><figure><img class="free" src="img/pultlampe-lysspredning.webp" alt="LED-paneler før og etter at de er dekket med et spredende materiale" width="1465" height="505" loading="lazy"><figcaption>Lyspanelene uten og med spredning.</figcaption></figure></div></li>
- <li class="step"><span class="num" aria-hidden="true">5</span><div><h3><span class="visually-hidden">Steg 5: </span>Teste igjen og få innspill fra bransjen</h3><p>Med en fysisk mockup testet vi på nytt. Tre brukere brukte lampen helt forskjellig: én satte PC-en til siden for å få plass til papirer, og de to andre ville ha svært ulik lysstyrke. Flere slet med å finne et naturlig sted å gripe lampehodet, så vi la til en tekstur formet som et tommelavtrykk.</p><p>I et møte med Glamox fikk vi høre at kontorbelysning er tungt regulert, og at konseptet passet bedre for forbrukere enn for bedrifter. Det endret målgruppen vår.</p></div><div class="media"><img class="shot" src="img/pultlampe-11.webp" alt="Brukertest med prototypen" width="690" height="1016" loading="lazy" style="max-width:420px"></div></li>
- <li class="step"><span class="num" aria-hidden="true">6</span><div><h3><span class="visually-hidden">Steg 6: </span>Designe betjeningen</h3><p>Under lampehodet sitter tre hjul: ett for hvert panel og ett for fargetemperaturen. Fordi det er vanskelig å stille to hjul likt, kan det høyre trykkes inn, så styrer det venstre begge panelene. Fargetemperaturen styres felles, så to ulike fargetoner ikke konkurrerer på kameraet.</p></div><div class="media"><img class="free" src="img/pultlampe-betjening.webp" alt="Rendering av undersiden av lampehodet med tre hjul, og illustrasjon av hvordan hjulene styrer lysstyrke per panel og felles fargetemperatur" width="1354" height="733" loading="lazy"></div></li>
- </ol>
-</section>
-
-<section class="c-sec" aria-labelledby="losning">
- <h2 id="losning">Endelig løsning</h2>
- <p>To lyspaneler som kan rettes hver sin vei gir tre måter å bruke lampen på.</p>
- <div class="trio">
-  <figure><img class="shot" src="img/pultlampe-14.webp" alt="Lys kun mot ansiktet" width="804" height="526" loading="lazy"><figcaption>Kun ansikt</figcaption></figure>
-  <figure><img class="shot" src="img/pultlampe-15.webp" alt="Lys kun mot PC og arbeidsflate" loading="lazy"><figcaption>Kun pult</figcaption></figure>
-  <figure><img class="shot" src="img/pultlampe-16.webp" alt="Kombinert lys mot ansikt og skrivebord" loading="lazy"><figcaption>Begge deler</figcaption></figure>
- </div>
- <div style="margin-top:48px"><div class="hs bleed" style="--h:520px;--hm:260px;--gap:20px"><button type="button" class="nav prev" aria-label="Bla tilbake" hidden>←</button><div class="track" tabindex="0" role="region" aria-label="Bilder av prototypen"><img src="img/pultlampe-17.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-18.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-19.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-20.webp" alt="Prototype av Ampær" width="800" height="1200" decoding="async" loading="lazy"><img src="img/pultlampe-21.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-22.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-23.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"></div><button type="button" class="nav next" aria-label="Bla videre" hidden>→</button></div></div>
-</section>
-
-<section class="c-sec closing" aria-labelledby="refleksjon">
- <div>
-  <h2 id="refleksjon">Refleksjon</h2>
-  <p>Det jeg tar med meg som designer er verdien av å teste tidlig og ofte, også med enkle mockuper. De tidlige testene ga oss innsikt vi aldri ville fått fra research alene, og formet retningen lenge før noe var ferdig. Vi lagde også personaer tidlig, men endte med å snakke med ekte brukere i stedet. Det har gjort meg mer bevisst på å bruke prototyper som verktøy for å stille spørsmål, ikke bare for å bekrefte en løsning.</p>
- </div>
- <figure><img class="free" src="img/pultlampe-render-frilagt.webp" alt="Tre renderinger av Ampær med ulike lampevinkler" width="1267" height="856" loading="lazy"></figure>
-</section>
+<section class="c-intro" aria-label="Om prosjektet"><div><p class="lede">Under pandemien skrudde mange av kameraet i videomøter og skyldte på rotete rom eller dårlig lys. Ampær er en skrivebordslampe som kan <b>lyse opp både ansiktet og arbeidsflaten</b>, så du fremstår mer presentabel og trygg i digitale møter.</p><h2>Min rolle</h2><p>Konseptet vi landet på, bygget på <b>mine skisser og idéer</b>, som vokste frem gjennom arbeidet i gruppen. Jeg sto for <b>all CAD-modellering og alle renderinger</b>. Prosjektet fikk toppkarakter og god tilbakemelding.</p></div><figure><img class="free" src="img/pultlampe-01.webp" alt="Tre versjoner av Ampær-lampen" width="1880" height="1228" loading="lazy"></figure></section>
+<section class="c-sec" aria-labelledby="prosess"><p class="eyebrow">Slik jobbet vi</p><h2 id="prosess">To brukertester formet en lampe med to paneler</h2><ol class="steps"><li class="step"><span class="num" aria-hidden="true">1</span><div><h3><span class="visually-hidden">Steg 1: </span>Dårlig lys i videomøter har tre vanlige årsaker</h3><p>Vi besøkte Glamox-fabrikken på Kirkenær og satte oss inn i hva som gir godt lys på hjemmekontoret: lite kontrast og skygger, ingen gjenskinn i skjermen og en egen lyskilde til det du jobber med. Videomøter feiler typisk på <b>motlys, skygger fra taklys og overeksponering</b>.</p><div class="decision"><p><span class="lbl">Derfor</span>Lampen skulle være en <b>egen, justerbar lyskilde</b> ved skrivebordet, ikke enda et lys for hele rommet.</p></div></div><div class="media"><img class="free" src="img/pultlampe-videomoter.webp" alt="Fire videomøter: motlys fra vinduet, skygger fra taklys, overeksponert, og jevnt godt lys" width="1216" height="816" loading="lazy"></div></li><li class="step"><span class="num" aria-hidden="true">2</span><div><h3><span class="visually-hidden">Steg 2: </span>Brukerne ville ikke ha lyset rett i ansiktet</h3><p>Vi satte opp et hjemmekontor med en L-1-lampe der lysstyrke og fargetemperatur kunne justeres, og ba brukerne stille inn lyset slik de ville se ut i et videomøte.</p><p><b>Ingen rettet lyset rett mot ansiktet</b>, og da vi trakk fra gardinene, mente de at lampen ikke gjorde noen forskjell.</p><div class="decision"><p><span class="lbl">Derfor</span>Løsningen måtte være <b>fleksibel</b>, så brukeren selv bestemmer hvor lyset treffer, i stedet for et sterkt lys mot ansiktet.</p></div></div><div class="media"><img class="free" src="img/pultlampe-brukertest-l1.webp" alt="Brukertest med en L-1-lampe ved et skrivebord" width="1347" height="700" loading="lazy"></div></li><li class="step wide"><span class="num" aria-hidden="true">3</span><div><h3><span class="visually-hidden">Steg 3: </span>Over ti konsepter ble til slutt til to lyspaneler</h3><p>Vi skisserte bredt: lys festet til PC-skjermen, ringlys med kamera, lys gjemt i pulten, magnetlamper og mye mer. De fleste sporene ble forkastet underveis, og ringlyset som kan brettes ut, ble til to lyspaneler.</p><div class="decision"><p><span class="lbl">Valget</span>Til slutt sto en L-1-lampe med ringlys mot foldelampen. L-1-varianten var gjenkjennelig, men lite nytenkende og vanskelig å få til å fungere. Vi valgte <b>foldelampen fordi den var original og fleksibel</b>.</p></div></div><div class="media"><p class="hint">Bla sidelengs for å følge skissene fra første idé til to lyspaneler.</p><div class="hs bleed" style="--h:520px;--hm:300px;--gap:0px"><button type="button" class="nav prev" aria-label="Bla tilbake" hidden>←</button><div class="track" tabindex="0" role="region" aria-label="Skissetidslinje"><img src="img/pultlampe-skisser-1.webp" alt="Skisser: hva vil vi jobbe med? Fra boklansering og hologram til lys for nettmøter" width="1287" height="845" decoding="async"><img src="img/pultlampe-skisser-2.webp" alt="Skisser av forkastede konsepter: lys festet i PC-skjermen, ringlys med kamera, laptop-klips og lys gjemt i pulten" width="1287" height="845" decoding="async"><img src="img/pultlampe-skisser-3.webp" alt="Skisser av videre konsepter: magnetlamper, Makaronien, Snusboksen og Sminkeskrinet" width="1287" height="845" decoding="async"><img src="img/pultlampe-skisser-4.webp" alt="Mange blir til to: ringlyset som kan brettes ut, blir til to lyspaneler" width="1287" height="845" decoding="async"></div><button type="button" class="nav next" aria-label="Bla videre" hidden>→</button></div></div></li><li class="step"><span class="num" aria-hidden="true">4</span><div><h3><span class="visually-hidden">Steg 4: </span>Avstanden til lyskilden betydde mer enn materialet</h3><p>Vi testet lysspredning med en tavle med LED-striper og ulike materialer. Fra en modell i furu gikk vi videre til 3D-printede prototyper som <b>jeg modellerte i Fusion 360</b>, med LED-lys som kan justere både lysstyrke og fargetemperatur.</p><div class="decision"><p><span class="lbl">Derfor</span>Vi valgte <b>0,5 mm hvit PMMA</b>, som spredte lyset best uten å gjøre lampehodet tykkere.</p></div></div><div class="media"><figure><img class="free" src="img/pultlampe-lysspredning.webp" alt="LED-paneler før og etter at de er dekket med et spredende materiale" width="1465" height="505" loading="lazy"><figcaption>Lyspanelene uten og med spredning.</figcaption></figure></div></li><li class="step"><span class="num" aria-hidden="true">5</span><div><h3><span class="visually-hidden">Steg 5: </span>Tre brukere brukte lampen på tre ulike måter</h3><p>Med en fysisk mockup testet vi på nytt. Én satte PC-en til siden for å få plass til papirer, og de to andre ville ha svært ulik lysstyrke. Etterpå presenterte vi lampen for Glamox for å få innspill fra bransjen.</p><div class="decision"><p class="lbl-row"><span class="lbl">Fra funn til endring</span></p><ul class="changes"><li><span>Brukerne ville ha lyset på ulike steder</span><span class="arrow" aria-hidden="true">→</span><b>To paneler som kan rettes hver sin vei</b></li><li><span>Flere fant ikke et naturlig sted å gripe</span><span class="arrow" aria-hidden="true">→</span><b>En tekstur formet som et tommelavtrykk</b></li><li><span>Glamox: kontorbelysning er tungt regulert</span><span class="arrow" aria-hidden="true">→</span><b>Forbrukere som målgruppe i stedet for bedrifter</b></li></ul></div></div><div class="media"><img class="shot" src="img/pultlampe-11.webp" alt="Brukertest med prototypen" width="690" height="1016" loading="lazy" style="max-width:420px"></div></li><li class="step"><span class="num" aria-hidden="true">6</span><div><h3><span class="visually-hidden">Steg 6: </span>Tre hjul gir full kontroll uten å bli vanskelig</h3><p>Under lampehodet sitter <b>tre hjul</b>: ett for hvert panel og ett for fargetemperaturen.</p><div class="decision"><p class="lbl-row"><span class="lbl">Fra funn til endring</span></p><ul class="changes"><li><span>Det er vanskelig å stille to hjul likt</span><span class="arrow" aria-hidden="true">→</span><b>Det høyre hjulet kan trykkes inn, så styrer det venstre begge</b></li><li><span>To fargetoner ville konkurrert på kameraet</span><span class="arrow" aria-hidden="true">→</span><b>Fargetemperaturen styres felles</b></li></ul></div></div><div class="media"><img class="free" src="img/pultlampe-betjening.webp" alt="Rendering av undersiden av lampehodet med tre hjul, og illustrasjon av hvordan hjulene styrer lysstyrke per panel og felles fargetemperatur" width="1354" height="733" loading="lazy"></div></li></ol></section>
+<section class="c-sec " aria-labelledby="losning"><p class="eyebrow">Endelig løsning</p><h2 id="losning">To paneler gir tre måter å bruke lampen på</h2><div class="trio"><figure><img class="shot" src="img/pultlampe-14.webp" alt="Lys kun mot ansiktet" width="804" height="526" loading="lazy"><figcaption>Kun ansikt</figcaption></figure><figure><img class="shot" src="img/pultlampe-15.webp" alt="Lys kun mot PC og arbeidsflate" width="804" height="526" loading="lazy"><figcaption>Kun pult</figcaption></figure><figure><img class="shot" src="img/pultlampe-16.webp" alt="Kombinert lys mot ansikt og skrivebord" width="804" height="526" loading="lazy"><figcaption>Begge deler</figcaption></figure></div><div style="margin-top:48px"><p class="hint">Bla sidelengs for flere bilder av prototypen.</p><div class="hs bleed" style="--h:520px;--hm:260px;--gap:20px"><button type="button" class="nav prev" aria-label="Bla tilbake" hidden>←</button><div class="track" tabindex="0" role="region" aria-label="Bilder av prototypen"><img src="img/pultlampe-17.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-18.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-19.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-20.webp" alt="Prototype av Ampær" width="800" height="1200" decoding="async" loading="lazy"><img src="img/pultlampe-21.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-22.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"><img src="img/pultlampe-23.webp" alt="Prototype av Ampær" width="1350" height="900" decoding="async" loading="lazy"></div><button type="button" class="nav next" aria-label="Bla videre" hidden>→</button></div></div></section>
+<section class="c-sec closing" aria-labelledby="refleksjon"><div><p class="eyebrow">Refleksjon</p><h2 id="refleksjon">Tidlige tester ga innsikt research alene aldri hadde gitt</h2><p>Det jeg tar med meg som designer, er verdien av å <b>teste tidlig og ofte</b>, også med enkle mockuper. Testene formet retningen lenge før noe var ferdig. Vi lagde også personaer tidlig, men endte med å snakke med ekte brukere i stedet.</p><p>Det har gjort meg mer bevisst på å bruke <b>prototyper som verktøy for å stille spørsmål</b>, ikke bare for å bekrefte en løsning.</p></div><figure><img class="free" src="img/pultlampe-render-frilagt.webp" alt="Tre renderinger av Ampær med ulike lampevinkler" width="1267" height="856" loading="lazy"></figure></section>
+<nav class="backnav" aria-label="Videre"><a class="btn" href="#top"><span aria-hidden="true">↑</span> Til toppen</a><a class="btn" href="./#prosjekter"><span aria-hidden="true">←</span> Tilbake til prosjekter</a></nav>
 </article>
 </main>
 <script>
@@ -245,10 +256,7 @@ footer{padding-block:64px;font-size:15px}
     var t=h.querySelector('.track'),p=h.querySelector('.prev'),n=h.querySelector('.next');
     // each arrow press moves to the start of the next or previous image
     function stops(){var pad=parseFloat(getComputedStyle(t).paddingLeft)||0,max=t.scrollWidth-t.clientWidth;
-      var out=[];Array.prototype.forEach.call(t.querySelectorAll('img'),function(i){
-        var k=i.clientHeight/(i.naturalHeight||i.clientHeight||1),pts=i.dataset.stops?i.dataset.stops.split(',').map(Number):[0];
-        pts.forEach(function(s){out.push(Math.min(max,Math.max(0,i.offsetLeft-pad+s*k)))});});
-      return out;}
+      return Array.prototype.map.call(t.querySelectorAll('img'),function(i){return Math.min(max,Math.max(0,i.offsetLeft-pad))});}
     function go(dir){var x=t.scrollLeft,s=stops(),target=null;
       if(dir>0){for(var k=0;k<s.length;k++){if(s[k]>x+4){target=s[k];break}} if(target===null)target=t.scrollWidth;}
       else{for(var k=s.length-1;k>=0;k--){if(s[k]<x-4){target=s[k];break}} if(target===null)target=0;}

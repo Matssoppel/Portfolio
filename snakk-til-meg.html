@@ -85,7 +85,124 @@ footer{padding-block:64px;font-size:15px}
   .cv .t.nw{white-space:normal}
   .cv .gap{margin-top:22px}
 }
-.proj{max-width:none;padding-inline:16px}.cv .vid{border:1.5px solid #000;box-sizing:border-box;background:#030303}.cv .vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:bottom}@media (max-width:760px){.cv .i.vid{height:auto!important;aspect-ratio:598/662}}</style>
+.proj{max-width:none;padding-inline:16px}.cv .vid{border:1.5px solid #000;box-sizing:border-box;background:#030303}.cv .vid video{display:block;width:100%;height:100%;object-fit:cover;object-position:bottom}@media (max-width:760px){.cv .i.vid{height:auto!important;aspect-ratio:598/662}}
+
+
+
+
+/* Case pages with a numbered process */
+.case{max-width:1180px;margin:0 auto;padding-block:48px 24px;color:#000}
+.case h2{font-size:clamp(26px,2.6vw,34px);font-weight:600;margin:0 0 24px;line-height:1.2;text-wrap:balance;max-width:28ch}
+.case p{font-size:15px;line-height:1.65;margin:0 0 12px;max-width:62ch}
+.case b{font-weight:600}
+.case a.inline{color:var(--ink);font-weight:600;border-bottom:2px solid var(--ink)}
+.case a.inline:hover{border-bottom-width:4px}
+.case figure{margin:0}
+.case figcaption{font-size:13px;font-style:italic;margin-top:8px;color:#000}
+.eyebrow{font-size:13px!important;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 8px!important}
+.hint{font-size:13px!important;font-style:italic;color:var(--ink);margin:0 0 8px!important}
+.hint::before{content:"↓ ";font-style:normal}
+.c-sec{margin-top:104px}
+.c-head{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:32px 40px;align-items:start}
+.c-head h1{font-size:clamp(56px,8vw,112px);line-height:1.05;font-weight:700;color:var(--ink);margin:0;text-wrap:balance}
+.facts{position:relative;width:520px;height:250px;margin:8px 0 0;padding:0;list-style:none}
+.facts li{position:absolute;display:grid;grid-template-columns:68px 160px;column-gap:14px;align-items:start}
+.facts .f1{left:46px;top:0}.facts .f2{left:0;top:132px}.facts .f3{left:262px;top:110px}
+.facts img{width:68px;height:68px;object-fit:contain}
+.facts b{display:block;font-size:22px;font-weight:600;line-height:1.2;margin-bottom:4px}
+.facts span{display:block;font-size:13px;line-height:1.45}
+.c-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center;margin-top:80px}
+.c-intro .lede{font-size:18px;line-height:1.55;margin-bottom:28px}
+.c-intro h2{font-size:22px;margin:0 0 8px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:88px}
+.step{display:grid;grid-template-columns:56px minmax(0,5fr) minmax(0,6fr);gap:0 40px;align-items:start}
+.step .num{width:40px;height:40px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20fill%3D%22%23000%22%20d%3D%22M20%201.5a18.5%2018.5%200%201%201%200%2037a18.5%2018.5%200%201%201%200-37zM21.3%204.6a15.4%2015.6%200%201%200%200%2031.2a15.4%2015.6%200%201%200%200-31.2z%22/%3E%3C/svg%3E") center/contain no-repeat;color:var(--ink);display:grid;place-items:center;font-weight:600;font-size:19px;line-height:1;margin-top:2px}
+.step h3{font-size:22px;font-weight:600;margin:6px 0 12px;line-height:1.3;text-wrap:balance}
+.step .media{grid-column:3}
+.step.wide{grid-template-columns:56px minmax(0,1fr)}
+.step.wide .media{grid-column:2;margin-top:24px}
+.decision{margin-top:18px;background:#f4eea8;border-radius:12px;padding:14px 18px;max-width:62ch}
+.decision p{font-size:14.5px;margin:0}
+.decision p+p,.decision p+ul{margin-top:8px}
+.lbl{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:8px}
+.changes{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.changes li{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;font-size:14px;line-height:1.45;align-items:start}
+.changes .arrow{color:var(--ink);font-weight:600}
+.shot{display:block;width:100%;height:auto;border:1.5px solid #000;background:#fff}
+.free{display:block;width:100%;height:auto}
+.stack{display:grid;gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.us{display:grid;gap:14px}
+.us blockquote{margin:0;border:2px solid var(--ink);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55}
+.us blockquote b{display:block;color:var(--ink);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.hs{position:relative}
+.hs .track{position:relative;display:flex;gap:var(--gap,0px);overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#03045e55 transparent;padding-bottom:10px}
+.hs .track img{flex:none;height:var(--h,520px);width:auto;max-width:none}
+/* full-bleed: the strip runs to the window edges, first image lines up with the text */
+.hs.bleed{--edge:max(24px,calc(50vw - 590px));margin-inline:calc(50% - 50vw)}
+.hs.bleed .track{padding-inline:var(--edge)}
+.hs.bleed .prev{left:max(8px,calc(var(--edge) - 24px))}.hs.bleed .next{right:max(8px,calc(var(--edge) - 24px))}
+.hs .nav{position:absolute;top:calc(var(--h,520px)/2 - 24px);width:48px;height:48px;border-radius:50%;border:3px solid var(--ink);background:var(--bg);color:var(--ink);font:600 20px/1 Poppins,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s;z-index:2}
+.hs .nav:hover{background:var(--ink);color:var(--bg)}
+.hs .nav[hidden]{display:none}
+.proto{display:block}
+.proto img{display:block;width:100%;height:auto;transition:transform .2s}
+.proto:hover img{transform:scale(1.01)}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 40px;margin-top:40px}
+.features h3{font-size:18px;font-weight:600;margin:0 0 6px}
+.features p{font-size:14px;margin:0}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:8px}
+.trio figcaption{font-style:normal;font-weight:500}
+.step.wide .decision{max-width:none}
+.bp-wrap{overflow-x:auto;margin-top:8px}
+.bp{border-collapse:collapse;width:100%;min-width:760px;font-size:14px;line-height:1.45}
+.bp th,.bp td{border:1px solid #000;padding:12px 14px;vertical-align:top;text-align:left}
+.bp thead th{font-weight:600;background:#f4eea8}
+.bp tbody th{font-weight:600;width:150px;background:#f4eea8}
+.bp td:empty{background:repeating-linear-gradient(135deg,transparent 0 8px,#00000008 8px 16px)}
+.bp tr.line td{border:0;border-top:3px dashed #000;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:none}
+.comic{display:grid;grid-template-columns:1.5fr .81fr .73fr 1.44fr;gap:20px;align-items:start;margin-top:8px}
+.comic figure{display:grid;grid-template-rows:240px auto;gap:12px}
+.comic img{width:100%;height:240px;object-fit:contain;object-position:bottom}
+.comic figcaption{font-style:normal;font-size:14px;line-height:1.5;align-self:start}
+.ws{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px 56px;align-items:start}
+.ws .media{display:grid;gap:20px}
+.trio.phones{max-width:760px}
+.closing{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
+.quotes{display:grid;gap:12px}
+.quotes li{display:grid;gap:4px;border:2px solid var(--ink);border-radius:12px;padding:12px 16px;list-style:none}
+.quotes q{font-style:italic;font-size:14px}
+.quotes span{font-size:14px}
+.quotes ul{margin:0;padding:0;display:grid;gap:12px}
+.backnav{display:flex;flex-wrap:wrap;gap:16px;margin-top:112px;padding-top:32px;border-top:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:3px solid var(--ink);border-radius:28px;padding:10px 22px;font-weight:600;font-size:16px;color:var(--ink);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+@media (prefers-reduced-motion:reduce){.proto img{transition:none}}
+@media (max-width:900px){
+  .c-head{grid-template-columns:1fr}
+  .facts{position:static;width:auto;height:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .facts li{position:static;grid-template-columns:56px minmax(0,1fr)}
+  .facts img{width:56px;height:56px}
+  .c-intro,.closing{grid-template-columns:1fr;gap:32px}
+  .step{grid-template-columns:48px minmax(0,1fr);gap:0 20px}
+  .step .media{grid-column:1/-1;margin-top:20px}
+  .features{grid-template-columns:1fr 1fr}
+  .ws{grid-template-columns:1fr;gap:28px}
+  .comic{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .facts{grid-template-columns:1fr;gap:18px}
+  .c-sec{margin-top:72px}
+  .steps{gap:64px}
+  .hs .track img{height:var(--hm,300px)}
+  .hs .nav{display:none}
+  .features,.trio,.grid2{grid-template-columns:1fr}
+  .comic{grid-template-columns:1fr}
+  .comic figure{grid-template-rows:auto auto}.comic img{height:auto}
+  .changes li{grid-template-columns:1fr;gap:2px}
+  .changes .arrow{display:none}
+}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
 </head>
 <body>
 <nav class="top"><div class="wrap">
@@ -96,38 +213,36 @@ footer{padding-block:64px;font-size:15px}
     <a class="ml" href="mailto:uglandmats@gmail.com" aria-label="E-post: uglandmats@gmail.com" title="uglandmats@gmail.com"><img src="img/ikon-epost.svg" alt=""></a>
     <a class="li" href="https://www.linkedin.com/in/mats-ugland/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/ikon-linkedin.svg" alt=""></a>
   </div>
-</div></nav><main class="wrap proj"><div class="cv" data-w="1290" style="width:1290px;height:4224px">
-<h1 class="it t h" style="left:24px;top:63.3px;width:631.8px;order:0;font-size:120.4px;font-weight:700;text-align:left;color:#03045e;--ps:0px;--ms:70px;line-height:111%;">“Snakk til Meg”</h1>
-<div class="it i mh" style="left:701px;top:72.0px;width:80.0px;order:1;height:84.0px;--mw:80px;"><img src="img/snakk-til-meg-01.webp" alt="" loading="lazy"></div>
-<div class="it t h nw gap" style="left:794.9px;top:56.0px;width:191px;order:2;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Gruppeprosjekt</div>
-<div class="it t" style="left:801.2px;top:100.8px;width:184.7px;order:3;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Prosjektet var et samarbeid mellom fem studenter</div>
-<div class="it i mh" style="left:645.6px;top:230.6px;width:83.0px;order:4;height:74.0px;--mw:83px;"><img src="img/politiet-i-lomma-02.webp" alt="" loading="lazy"></div>
-<div class="it t h nw" style="left:742.1px;top:217.2px;width:100px;order:5;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Varighet</div>
-<div class="it t" style="left:744.1px;top:262.3px;width:184.7px;order:6;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Prosjektet varte i 5 uker som en del av et intensivemne</div>
-<div class="it i mh" style="left:907px;top:155.8px;width:114.0px;order:7;height:109.0px;--mw:114px;"><img src="img/snakk-til-meg-02.webp" alt="" loading="lazy"></div>
-<div class="it t h nw" style="left:1035.6px;top:174.1px;width:165px;order:8;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Skoleprosjekt</div>
-<div class="it t" style="left:1035.6px;top:217.2px;width:196.1px;order:9;font-size:13px;font-weight:400;text-align:left;color:#000;--ps:0px;--ms:13px;">Prosjektet var eksamensbesvarelse i emnet “Tangible Interaction” ved UiO</div>
-<h2 class="it t h nw gap" style="left:28px;top:400px;width:640px;order:10;font-size:36px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:28px;">Min rolle</h2>
-<div class="it t j" style="left:28px;top:475px;width:640px;order:11;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:13px;--ms:15px;"><p>Jeg jobbet sammen med Halvor Hetland, Karla Jacobsen, Maria Malmstedt Andersen og Malin Kristine Bjørnstadjordet. Alt ble utviklet i fellesskap, men jeg tok mye av ansvaret for Arduino, mikroelektronikk og koding, altså det som får dukken til å reagere på stemmer.</p></div>
-<h2 class="it t h nw gap" style="left:28px;top:676.2px;width:310px;order:12;font-size:36px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:28px;">Bakgrunn</h2>
-<div class="it t j" style="left:24px;top:761.2px;width:420.9px;order:13;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Dette prosjektet er en del av UiO-emnet Tangible Interaction, hvor målet var å utvikle en utstilling over fem uker. Besøkende kunne interagere med og oppleve installasjoner som kombinerte digitale input for å skape en helhetlig, interaktiv opplevelse. Temaet for emnet og utstillingen var puls.</div>
-<h3 class="it t h nw gap" style="left:24px;top:961.8px;width:310px;order:14;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Utforskningsfasen</h3>
-<div class="it t j" style="left:28px;top:1012.8px;width:420.9px;order:15;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:0px;--ms:15px;">Prosjektet startet med en utforskende fase, hvor vi eksperimenterte med mikroelektronikk, Arduino og ulike materialer. Parallelt utforsket vi selve temaet hva det kunne symbolisere og hvordan dette kunne kommuniseres til de besøkende på utstillingen.</div>
-<div class="it i " style="left:609.3px;top:685.5px;width:651.3px;order:16;height:446.2px;--mw:651px;"><img src="img/snakk-til-meg-03.webp" alt="Arbeid med dukken foran sort stoff" loading="lazy"></div>
-<div class="it i " style="left:604.4px;top:1149.7px;width:661.2px;order:17;height:460.7px;--mw:661px;"><img src="img/snakk-til-meg-04.webp" alt="Montering av dukken med fiskesnører" loading="lazy"></div>
-<div class="it i " style="left:34.9px;top:1207.7px;width:305px;order:18;height:203.4px;--mw:305px;"><img src="img/snakk-til-meg-05.webp" alt="Materialtest med hender" loading="lazy"></div>
-<div class="it i " style="left:34.9px;top:1420.7px;width:305px;order:19;height:203.4px;--mw:305px;"><img src="img/snakk-til-meg-06.webp" alt="Materialtest med hender" loading="lazy"></div>
-<div class="it i " style="left:34.9px;top:1633.8px;width:305px;order:20;height:203.4px;--mw:305px;"><img src="img/snakk-til-meg-07.webp" alt="Materialtest" loading="lazy"></div>
-<h3 class="it t h nw gap" style="left:28px;top:1917px;width:310px;order:21;font-size:24px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:22px;">Endelig konsept</h3>
-<div class="it t j" style="left:29.2px;top:1965.6px;width:498.2px;order:22;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:13px;--ms:15px;"><p>Sluttresultatet ble en menneskestor dukke, tynn, skjør og helt sort, formet av sort gaffateip. Over kroppen ligger et hvitt, gjennomsiktig slør som dekker alt unntatt ansiktet. Dukken sitter lent mot veggen i et mørkt rom, badet i et svakt lys som pulserer nedenfra og innenfra, som en puls man ikke helt kan tyde om er levende eller døende.</p><p>I rommet ligger atmosfærisk lyd, og en hviskende stemme gjentar: "Snakk til meg." "Hold meg i live."</p><p>Fra hodet og ryggen løper fiskesnører til en stepmotor, skjult i konstruksjonen. Når besøkende snakker til dukken, reiser den seg sakte, ikke til stående, men den løfter hodet og vender blikket opp mot den som snakker. Jo lenger man snakker, jo mer våkner den til liv. Stopper man, synker den sammen igjen. Slik blir møtet mellom besøkende og dukke en stille avtale: dukkens liv avhenger av at noen bryr seg nok til å fortsette samtalen, og når besøkende til slutt forlater rommet, er det siste de ser at den faller sammen igjen.</p></div>
-<div class="it i vid" style="left:666px;top:1714.6px;width:598px;order:23;height:662px;--mw:598px;"><video src="video/snakk-til-meg-installasjon.mp4" poster="img/snakk-til-meg-video-start.webp" autoplay muted loop playsinline aria-label="Video av installasjonen"></video></div>
-<div class="it i " style="left:28px;top:2447.2px;width:801.6px;order:24;height:534.4px;--mw:802px;"><img src="img/snakk-til-meg-09.webp" alt="Dukken under hvitt slør med fiskesnører" loading="lazy"></div>
-<div class="it i " style="left:34.9px;top:3035.9px;width:587px;order:25;height:880.5px;--mw:587px;"><img src="img/snakk-til-meg-10.webp" alt="Dukken belyst i mørket" loading="lazy"></div>
-<div class="it i " style="left:676.4px;top:3034.8px;width:587.7px;order:26;height:881.6px;--mw:588px;"><img src="img/snakk-til-meg-11.webp" alt="Dukken løfter hodet i mørket" loading="lazy"></div>
-<h2 class="it t h nw gap" style="left:28px;top:3986.4px;width:760px;order:27;font-size:36px;font-weight:600;text-align:left;color:#000;--ps:0px;--ms:28px;">Mottakelse og læring</h2>
-<div class="it t j" style="left:28px;top:4061.4px;width:760px;order:28;font-size:15px;font-weight:400;text-align:justify;color:#000;--ps:13px;--ms:15px;"><p>Publikum på utstillingen tok godt imot installasjonen og forsto konseptet. En besøkende mente til og med at den hørte hjemme på Høstutstillingen.</p><p>Kreativt samarbeid uten en bruker eller produkteier å evaluere mot er krevende. Jeg lærte at jeg må balansere det å ta ansvar med å holde resten av gruppen engasjert.</p></div>
-</div></main><script>
-(function(){var c=document.querySelectorAll('.cv');function f(){c.forEach(function(e){var w=+e.dataset.w,a=document.documentElement.clientWidth-32;e.style.setProperty('--z',window.matchMedia('(max-width:760px)').matches?1:Math.min(1,a/w));});}f();addEventListener('resize',f);})();
+</div></nav><main class="wrap">
+<article class="case">
+<header class="c-head" id="top"><h1>«Snakk til meg»</h1>
+<ul class="facts"><li class="f1"><img src="img/snakk-til-meg-01.webp" alt=""><div><b>Gruppeprosjekt</b><span>Fem studenter</span></div></li><li class="f2"><img src="img/politiet-i-lomma-02.webp" alt=""><div><b>Varighet</b><span>5 uker i et intensivemne</span></div></li><li class="f3"><img src="img/snakk-til-meg-02.webp" alt=""><div><b>Skoleprosjekt</b><span>Tangible Interaction ved UiO</span></div></li></ul>
+</header>
+<section class="c-intro" aria-label="Om prosjektet"><div><p class="lede">En menneskestor dukke som <b>våkner til liv når du snakker til den</b>, laget for en utstilling der temaet var puls.</p><h2>Min rolle</h2><p>Jeg jobbet sammen med Halvor Hetland, Karla Jacobsen, Maria Malmstedt Andersen og Malin Kristine Bjørnstadjordet. Alt ble utviklet i fellesskap, men jeg tok mye av ansvaret for <b>Arduino, mikroelektronikk og koding</b>, altså det som får dukken til å reagere på stemmer.</p></div><figure><video class="shot" src="video/snakk-til-meg-installasjon.mp4" poster="img/snakk-til-meg-video-start.webp" width="720" height="798" autoplay muted loop playsinline aria-label="Video av installasjonen" style="max-width:460px"></video></figure></section>
+<section class="c-sec" aria-labelledby="prosess"><p class="eyebrow">Slik jobbet vi</p><h2 id="prosess">Fra temaet puls til en dukke som lever av samtale</h2><ol class="steps"><li class="step"><span class="num" aria-hidden="true">1</span><div><h3><span class="visually-hidden">Steg 1: </span>Vi startet med å eksperimentere med materialer og elektronikk</h3><p>Prosjektet startet med en utforskende fase, der vi eksperimenterte med <b>mikroelektronikk, Arduino og ulike materialer</b>. Parallelt utforsket vi hva temaet puls kunne symbolisere, og hvordan det kunne kommuniseres til de besøkende.</p></div><div class="media"><div class="trio"><img class="free" src="img/snakk-til-meg-05.webp" alt="Materialtest med hender" width="611" height="407" loading="lazy"><img class="free" src="img/snakk-til-meg-06.webp" alt="Materialtest med hender" width="611" height="407" loading="lazy"><img class="free" src="img/snakk-til-meg-07.webp" alt="Materialtest" width="611" height="407" loading="lazy"></div></div></li><li class="step"><span class="num" aria-hidden="true">2</span><div><h3><span class="visually-hidden">Steg 2: </span>Pulsen ble til en dukke som må holdes i live</h3><p>Sluttresultatet ble en menneskestor dukke av sort gaffateip under et hvitt slør, i et mørkt rom med et svakt, pulserende lys. En hviskende stemme gjentar: «Snakk til meg.» «Hold meg i live.»</p><div class="decision"><p><span class="lbl">Konseptet</span>Dukken lever <b>bare så lenge noen snakker til den</b>. Slik blir møtet en stille avtale: dens liv avhenger av at noen bryr seg nok til å fortsette samtalen.</p></div></div><div class="media"><img class="free" src="img/snakk-til-meg-09.webp" alt="Dukken under hvitt slør med fiskesnører" width="1604" height="1069" loading="lazy"></div></li><li class="step"><span class="num" aria-hidden="true">3</span><div><h3><span class="visually-hidden">Steg 3: </span>En stepmotor og fiskesnører får dukken til å løfte hodet</h3><p>Fra hodet og ryggen løper fiskesnører til en <b>stepmotor</b> skjult i konstruksjonen. Når besøkende snakker, løfter dukken sakte hodet og vender blikket mot den som snakker. Stopper man, synker den sammen igjen.</p></div><div class="media"><img class="free" src="img/snakk-til-meg-11.webp" alt="Dukken løfter hodet i mørket" width="1176" height="1764" loading="lazy" style="max-width:420px"></div></li></ol></section>
+<section class="c-sec closing" aria-labelledby="resultat"><div><p class="eyebrow">Mottakelse og læring</p><h2 id="resultat">En besøkende mente installasjonen hørte hjemme på Høstutstillingen</h2><p>Publikum tok godt imot installasjonen og <b>forsto konseptet</b>.</p><p>Kreativt samarbeid uten en bruker eller produkteier å evaluere mot er krevende. Jeg lærte at jeg må <b>balansere det å ta ansvar med å holde resten av gruppen engasjert</b>.</p></div><figure><img class="free" src="img/snakk-til-meg-10.webp" alt="Dukken belyst i mørket" width="1175" height="1762" loading="lazy" style="max-width:420px"></figure></section>
+<nav class="backnav" aria-label="Videre"><a class="btn" href="#top"><span aria-hidden="true">↑</span> Til toppen</a><a class="btn" href="./#prosjekter"><span aria-hidden="true">←</span> Tilbake til prosjekter</a></nav>
+</article>
+</main>
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  document.querySelectorAll('.hs').forEach(function(h){
+    var t=h.querySelector('.track'),p=h.querySelector('.prev'),n=h.querySelector('.next');
+    // each arrow press moves to the start of the next or previous image
+    function stops(){var pad=parseFloat(getComputedStyle(t).paddingLeft)||0,max=t.scrollWidth-t.clientWidth;
+      return Array.prototype.map.call(t.querySelectorAll('img'),function(i){return Math.min(max,Math.max(0,i.offsetLeft-pad))});}
+    function go(dir){var x=t.scrollLeft,s=stops(),target=null;
+      if(dir>0){for(var k=0;k<s.length;k++){if(s[k]>x+4){target=s[k];break}} if(target===null)target=t.scrollWidth;}
+      else{for(var k=s.length-1;k>=0;k--){if(s[k]<x-4){target=s[k];break}} if(target===null)target=0;}
+      t.scrollTo({left:target,behavior:rm});}
+    function upd(){p.hidden=t.scrollLeft<=2;n.hidden=t.scrollLeft>=t.scrollWidth-t.clientWidth-2}
+    p.addEventListener('click',function(){go(-1)});
+    n.addEventListener('click',function(){go(1)});
+    t.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+    t.querySelectorAll('img').forEach(function(i){i.addEventListener('load',upd)});upd();
+  });
+})();
 </script>
 <footer class="wrap">© Mats Ugland</footer>
 </body>

@@ -94,12 +94,23 @@ footer{padding-block:64px;font-size:15px}
 
 
 
+
+
+
+
+
 /* Case pages with a numbered process */
 .case{max-width:1180px;margin:0 auto;padding-block:48px 24px;color:#000}
-.case h2{font-size:clamp(28px,3vw,36px);font-weight:600;margin:0 0 20px;line-height:1.2;text-wrap:balance}
+.case h2{font-size:clamp(26px,2.6vw,34px);font-weight:600;margin:0 0 24px;line-height:1.2;text-wrap:balance;max-width:28ch}
 .case p{font-size:15px;line-height:1.65;margin:0 0 12px;max-width:62ch}
+.case b{font-weight:600}
+.case a.inline{color:var(--ink);font-weight:600;border-bottom:2px solid var(--ink)}
+.case a.inline:hover{border-bottom-width:4px}
 .case figure{margin:0}
 .case figcaption{font-size:13px;font-style:italic;margin-top:8px;color:#000}
+.eyebrow{font-size:13px!important;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 8px!important}
+.hint{font-size:13px!important;font-style:italic;color:var(--ink);margin:0 0 8px!important}
+.hint::before{content:"↓ ";font-style:normal}
 .c-sec{margin-top:104px}
 .c-head{display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:32px 40px;align-items:start}
 .c-head h1{font-size:clamp(56px,8vw,112px);line-height:1.05;font-weight:700;color:var(--ink);margin:0;text-wrap:balance}
@@ -111,16 +122,25 @@ footer{padding-block:64px;font-size:15px}
 .facts span{display:block;font-size:13px;line-height:1.45}
 .c-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center;margin-top:80px}
 .c-intro .lede{font-size:18px;line-height:1.55;margin-bottom:28px}
-.c-intro h2{font-size:24px;margin:0 0 8px}
+.c-intro h2{font-size:22px;margin:0 0 8px}
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:88px}
 .step{display:grid;grid-template-columns:56px minmax(0,5fr) minmax(0,6fr);gap:0 40px;align-items:start}
 .step .num{width:40px;height:40px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20fill%3D%22%23000%22%20d%3D%22M20%201.5a18.5%2018.5%200%201%201%200%2037a18.5%2018.5%200%201%201%200-37zM21.3%204.6a15.4%2015.6%200%201%200%200%2031.2a15.4%2015.6%200%201%200%200-31.2z%22/%3E%3C/svg%3E") center/contain no-repeat;color:var(--ink);display:grid;place-items:center;font-weight:600;font-size:19px;line-height:1;margin-top:2px}
-.step h3{font-size:24px;font-weight:600;margin:6px 0 12px;line-height:1.25}
+.step h3{font-size:22px;font-weight:600;margin:6px 0 12px;line-height:1.3;text-wrap:balance}
 .step .media{grid-column:3}
 .step.wide{grid-template-columns:56px minmax(0,1fr)}
-.step.wide .media{grid-column:1/-1;margin-top:24px}
+.step.wide .media{grid-column:2;margin-top:24px}
+.decision{margin-top:18px;background:#f4eea8;border-radius:12px;padding:14px 18px;max-width:62ch}
+.decision p{font-size:14.5px;margin:0}
+.decision p+p,.decision p+ul{margin-top:8px}
+.lbl{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:8px}
+.changes{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.changes li{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:10px;font-size:14px;line-height:1.45;align-items:start}
+.changes .arrow{color:var(--ink);font-weight:600}
 .shot{display:block;width:100%;height:auto;border:1.5px solid #000;background:#fff}
 .free{display:block;width:100%;height:auto}
+.stack{display:grid;gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .us{display:grid;gap:14px}
 .us blockquote{margin:0;border:2px solid var(--ink);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.55}
 .us blockquote b{display:block;color:var(--ink);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
@@ -133,19 +153,40 @@ footer{padding-block:64px;font-size:15px}
 .hs.bleed .prev{left:max(8px,calc(var(--edge) - 24px))}.hs.bleed .next{right:max(8px,calc(var(--edge) - 24px))}
 .hs .nav{position:absolute;top:calc(var(--h,520px)/2 - 24px);width:48px;height:48px;border-radius:50%;border:3px solid var(--ink);background:var(--bg);color:var(--ink);font:600 20px/1 Poppins,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s,color .15s;z-index:2}
 .hs .nav:hover{background:var(--ink);color:var(--bg)}
-.hs .prev{left:-10px}.hs .next{right:-10px}
 .hs .nav[hidden]{display:none}
-.hs-hint{font-size:13px;font-style:italic;margin-top:6px}
-.solution .proto{display:block;margin-top:8px}
-.solution .proto img{display:block;width:100%;height:auto;transition:transform .2s}
-.solution .proto:hover img{transform:scale(1.01)}
+.proto{display:block}
+.proto img{display:block;width:100%;height:auto;transition:transform .2s}
+.proto:hover img{transform:scale(1.01)}
 .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 40px;margin-top:40px}
 .features h3{font-size:18px;font-weight:600;margin:0 0 6px}
 .features p{font-size:14px;margin:0}
 .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:8px}
 .trio figcaption{font-style:normal;font-weight:500}
+.step.wide .decision{max-width:none}
+.bp-wrap{overflow-x:auto;margin-top:8px}
+.bp{border-collapse:collapse;width:100%;min-width:760px;font-size:14px;line-height:1.45}
+.bp th,.bp td{border:1px solid #000;padding:12px 14px;vertical-align:top;text-align:left}
+.bp thead th{font-weight:600;background:#f4eea8}
+.bp tbody th{font-weight:600;width:150px;background:#f4eea8}
+.bp td:empty{background:repeating-linear-gradient(135deg,transparent 0 8px,#00000008 8px 16px)}
+.bp tr.line td{border:0;border-top:3px dashed #000;padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:none}
+.comic{display:grid;grid-template-columns:1.5fr .81fr .73fr 1.44fr;gap:20px;align-items:start;margin-top:8px}
+.comic figure{display:grid;grid-template-rows:240px auto;gap:12px}
+.comic img{width:100%;height:240px;object-fit:contain;object-position:bottom}
+.comic figcaption{font-style:normal;font-size:14px;line-height:1.5;align-self:start}
+.ws{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px 56px;align-items:start}
+.ws .media{display:grid;gap:20px}
+.trio.phones{max-width:760px}
 .closing{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center}
-@media (prefers-reduced-motion:reduce){.solution .proto img{transition:none}}
+.quotes{display:grid;gap:12px}
+.quotes li{display:grid;gap:4px;border:2px solid var(--ink);border-radius:12px;padding:12px 16px;list-style:none}
+.quotes q{font-style:italic;font-size:14px}
+.quotes span{font-size:14px}
+.quotes ul{margin:0;padding:0;display:grid;gap:12px}
+.backnav{display:flex;flex-wrap:wrap;gap:16px;margin-top:112px;padding-top:32px;border-top:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:3px solid var(--ink);border-radius:28px;padding:10px 22px;font-weight:600;font-size:16px;color:var(--ink);background:transparent;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+@media (prefers-reduced-motion:reduce){.proto img{transition:none}}
 @media (max-width:900px){
   .c-head{grid-template-columns:1fr}
   .facts{position:static;width:auto;height:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -155,6 +196,8 @@ footer{padding-block:64px;font-size:15px}
   .step{grid-template-columns:48px minmax(0,1fr);gap:0 20px}
   .step .media{grid-column:1/-1;margin-top:20px}
   .features{grid-template-columns:1fr 1fr}
+  .ws{grid-template-columns:1fr;gap:28px}
+  .comic{grid-template-columns:1fr 1fr}
 }
 @media (max-width:560px){
   .facts{grid-template-columns:1fr;gap:18px}
@@ -162,7 +205,11 @@ footer{padding-block:64px;font-size:15px}
   .steps{gap:64px}
   .hs .track img{height:var(--hm,300px)}
   .hs .nav{display:none}
-  .features,.trio{grid-template-columns:1fr}
+  .features,.trio,.grid2{grid-template-columns:1fr}
+  .comic{grid-template-columns:1fr}
+  .comic figure{grid-template-rows:auto auto}.comic img{height:auto}
+  .changes li{grid-template-columns:1fr;gap:2px}
+  .changes .arrow{display:none}
 }
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
 </head>
@@ -177,53 +224,14 @@ footer{padding-block:64px;font-size:15px}
   </div>
 </div></nav><main class="wrap">
 <article class="case">
-<header class="c-head"><h1>Prosjekt&shy;hub</h1>
+<header class="c-head" id="top"><h1>Prosjekt&shy;hub</h1>
 <ul class="facts"><li class="f1"><img src="img/politiet-i-lomma-01.webp" alt=""><div><b>Gruppeprosjekt</b><span>Med Olivia Skarnes, Lea Mæhlum og Sandra Rajic Riise</span></div></li><li class="f2"><img src="img/politiet-i-lomma-02.webp" alt=""><div><b>Varighet</b><span>6 uker, sommeren 2026</span></div></li><li class="f3"><img src="img/prosjekthub-01.webp" alt=""><div><b>Sommerinternship</b><span>Sluttleveransen i et sommerinternship i Forsvarsbygg</span></div></li></ul>
 </header>
-
-<section class="c-intro" aria-labelledby="om">
- <div>
-  <h2 id="om" class="visually-hidden">Om prosjektet</h2>
-  <p class="lede">Prosjektledere i Forsvarsbygg hopper daglig mellom fem eller flere systemer som ikke snakker sammen. Vi undersøkte hvordan informasjonsflyten i byggeprosjekter kan bli bedre, samtidig som Forsvarsbygg innfører Omega 365 som felles prosjektplattform.</p>
-  <h2>Min rolle</h2>
-  <p>Vi var åtte studenter fra blant annet byggingeniørfag og datateknologi, delt i to team. Jeg jobbet i teamet for digital byggeplass og hadde ansvaret for designarbeidet. Intervjuene, befaringene og brukerhistoriene gjorde vi sammen. På Figma-prototypen var vi to, og jeg laget komponentene som ble brukt i den endelige prototypen.</p>
- </div>
- <figure><img class="free" src="img/prosjekthub-03.webp" alt="Studentgruppen i sommerprosjektet hos Forsvarsbygg" width="733" height="467"></figure>
-</section>
-
-<section class="c-sec" aria-labelledby="prosess">
- <h2 id="prosess">Slik jobbet vi</h2>
- <ol class="steps">
- <li class="step"><span class="num" aria-hidden="true">1</span><div><h3><span class="visually-hidden">Steg 1: </span>Avgrense oppgaven</h3><p>Oppdraget var bredt: digitalisering av byggeprosjekter. I starten holdt vi workshops og idéprosesser for å få en felles forståelse av problemet og finne ut hvor vi kunne skape mest verdi på seks uker. Vi landet på informasjonsflyten i gjennomføringsfasen, og hvordan Omega 365 kan støtte den.</p></div><div class="media"><img class="free" src="img/prosjekthub-18.webp" alt="Prosjekthub vist på en laptop" width="1455" height="658" loading="lazy"></div></li>
- <li class="step"><span class="num" aria-hidden="true">2</span><div><h3><span class="visually-hidden">Steg 2: </span>Kartlegge hverdagen</h3><p>Gruppen gjennomførte rundt 40 semistrukturerte gruppeintervjuer med prosjektledere, byggeledere, entreprenører og systemforvaltere, og jeg var med på om lag 20 av dem. Vi brukte intervjuguide og skrev notater etter hvert intervju.</p><p>I tillegg var vi på befaring på byggeplasser, gikk gjennom styrende dokumenter og prosesskart, og møtte Sykehusbygg, som har brukt Omega 365 i nesten ti år.</p></div><div class="media"><img class="free" src="img/prosjekthub-02.webp" alt="Studentgruppen i arbeid med intervjuer og kartlegging" width="753" height="518" loading="lazy"></div></li>
- <li class="step"><span class="num" aria-hidden="true">3</span><div><h3><span class="visually-hidden">Steg 3: </span>Finne kjernen i problemet</h3><p>Vi grupperte funnene i fem områder: informasjonsforvaltning, prosjektstyring, datakvalitet, kultur og teknologi. På tvers av dem fant vi én felles årsak. Informasjonen finnes, men den er spredt på systemer, dokumenter og aktører. Brukerne må huske hvor ting ligger, og en endring blir lett bare gjort ett sted.</p><p>Derfor skulle løsningen ikke legge til nye datakilder, men gjøre det som allerede finnes synlig for riktig rolle til riktig tid.</p></div><div class="media"><figure><img class="free" src="img/prosjekthub-04.webp" alt="Illustrasjon av en prosjektleder foran systemene Arkiv, FDV, BIM, Økonomi, Saksbehandling og Kontrakter" width="736" height="680" loading="lazy"><figcaption>Systemene en prosjektleder hopper mellom i dag.</figcaption></figure></div></li>
- <li class="step"><span class="num" aria-hidden="true">4</span><div><h3><span class="visually-hidden">Steg 4: </span>Brukerhistorier og designprinsipper</h3><p>Fra intervjuene skrev vi brukerhistorier som styrte hva dashbordet skulle prioritere.</p><p>Designet bygger på Nielsens brukbarhetsheuristikker, særlig synlig systemstatus, gjenkjenning fremfor hukommelse, konsistens og brukerkontroll, og på Don Normans prinsipper om synlighet og tilbakemelding.</p></div><div class="media"><div class="us"><blockquote><b>Samlet oversikt</b>Som prosjektleder ønsker jeg å se alle oppgaver, varsler og hendelser samlet i ett dashbord, slik at jeg raskt ser hva som krever handling.</blockquote><blockquote><b>Personlig oppgaveliste</b>Som prosjektleder ønsker jeg en oppgaveliste der jeg kan markere oppgaver som fullført, slik at jeg ser hva som gjenstår.</blockquote><blockquote><b>Nye saker</b>Som prosjektleder ønsker jeg å se nye dokumenter, endringsvarsler og saker samlet, slik at jeg ikke går glipp av viktige hendelser.</blockquote></div></div></li>
- <li class="step"><span class="num" aria-hidden="true">5</span><div><h3><span class="visually-hidden">Steg 5: </span>Teste og forbedre</h3><p>Mange brukere var på sommerferie mens vi designet, så vi brukte heuristikkene til å evaluere og forbedre prototypen underveis. Da de kom tilbake, testet vi den med brukere.</p><p>De ønsket mer prosjektinformasjon, som prosjekt-ID-en fra Agresso, og pekte på at de ofte har flere prosjekter samtidig. Derfor fikk dashbordet et felt med prosjektinfo, en prosjektvelger i brukerprofilen og snarveier direkte til de andre systemene.</p></div><div class="media"><figure><img class="free" src="img/prosjekthub-08.webp" alt="Feltet Prosjektinfo i Prosjekthub" width="1016" height="346" loading="lazy"><figcaption>Feltet Prosjektinfo kom til etter brukertesten.</figcaption></figure></div></li>
- </ol>
-</section>
-
-<section class="c-sec solution" aria-labelledby="losning">
- <h2 id="losning">Løsningen</h2>
- <p>En klikkbar Figma-prototype av et rollebasert dashbord i Omega 365. Vi tok utgangspunkt i prosjektlederen for å vise prinsippet, men hver rolle skal få sitt eget dashbord med informasjonen den trenger.</p>
- <a class="proto" href="https://www.figma.com/proto/qvTKq1UTLw1Cafg6NZph45/Prosjekthub?node-id=8-2&amp;page-id=4%3A8850&amp;starting-point-node-id=8%3A2&amp;t=GVI1zqyZwoGQvNqQ-1" target="_blank" rel="noopener"><img src="img/prosjekthub-05.webp" alt="Figma-prototype av Prosjekthub-dashbordet" width="2716" height="1840" loading="lazy"></a>
- <p class="hs-hint">Trykk på bildet for å prøve prototypen selv.</p>
- <div class="features">
-  <div><h3>Snarveier</h3><p>Knapper til BIM, Arkiv, Økonomi og Dokumenter, og mapper du velger selv.</p></div>
-  <div><h3>Prosjektinfo</h3><p>Prosjektnummer, kategori, kostsjef og region på ett blikk, og bytte av prosjekt via profilen.</p></div>
-  <div><h3>Alle saker</h3><p>Et trafikklys viser status på sakene, med filtrering på fagområde, ansvarlig og dato.</p></div>
-  <div><h3>Dine oppgaver</h3><p>En personlig oppgaveliste sortert etter frist.</p></div>
-  <div><h3>KPIer</h3><p>Nøkkeltall og fremdrift for økonomi og milepæler.</p></div>
-  <div><h3>På jobb og chat</h3><p>Hvem som er pålogget, og en chat knyttet til hver sak som kan arkiveres for sporbarhet.</p></div>
- </div>
-</section>
-
-<section class="c-sec closing" aria-labelledby="resultat">
- <div>
-  <h2 id="resultat">Resultat</h2>
-  <p>Vi presenterte løsningen for ledelsen og ansatte i Forsvarsbygg i en åpen presentasjon og fikk mye positiv respons. Brukerne vi hadde intervjuet, ønsket å se dashbordet realisert.</p><p>I rapporten anbefalte vi også hvordan dashbordet kan innføres: med superbrukere, opplæring tilpasset hver rolle og brukerinvolvering gjennom pilotprosjekter. Gevinsten avhenger nemlig av at folk faktisk tar systemet i bruk.</p>
- </div>
- <figure><img class="free" src="img/prosjekthub-17.webp" alt="Prosjekthub på mobil" width="924" height="866" loading="lazy"><figcaption>Dashbordet er også tenkt for mobil, så informasjonen kan tas med ut på byggeplassen.</figcaption></figure>
-</section>
+<section class="c-intro" aria-label="Om prosjektet"><div><p class="lede">Prosjektledere i Forsvarsbygg hopper daglig mellom <b>fem eller flere systemer som ikke snakker sammen</b>. Vi undersøkte hvordan informasjonsflyten i byggeprosjekter kan bli bedre, samtidig som Forsvarsbygg innfører Omega 365 som felles prosjektplattform.</p><h2>Min rolle</h2><p>Vi var åtte studenter fra blant annet byggingeniørfag og datateknologi, delt i to team. Jeg jobbet i teamet for digital byggeplass og hadde <b>ansvaret for designarbeidet</b>. Intervjuene, befaringene og brukerhistoriene gjorde vi sammen. På Figma-prototypen var vi to, og <b>jeg laget komponentene</b> som ble brukt i den endelige prototypen.</p></div><figure><img class="free" src="img/prosjekthub-03.webp" alt="Studentgruppen i sommerprosjektet hos Forsvarsbygg" width="733" height="467" loading="lazy"></figure></section>
+<section class="c-sec" aria-labelledby="prosess"><p class="eyebrow">Slik jobbet vi</p><h2 id="prosess">Fra 40 intervjuer til et dashbord på seks uker</h2><ol class="steps"><li class="step"><span class="num" aria-hidden="true">1</span><div><h3><span class="visually-hidden">Steg 1: </span>Vi snevret inn et bredt oppdrag til én ting: informasjonsflyt</h3><p>Oppdraget var bredt: digitalisering av byggeprosjekter. I starten holdt vi <b>workshops og idéprosesser</b> for å få en felles forståelse av problemet og finne ut hvor vi kunne skape mest verdi på seks uker.</p><div class="decision"><p><span class="lbl">Derfor</span>Vi valgte informasjonsflyten i gjennomføringsfasen, fordi Omega 365 var i ferd med å innføres og løsningen kunne bygge videre på det.</p></div></div><div class="media"><img class="free" src="img/prosjekthub-18.webp" alt="Prosjekthub vist på en laptop" width="1455" height="658" loading="lazy"></div></li><li class="step"><span class="num" aria-hidden="true">2</span><div><h3><span class="visually-hidden">Steg 2: </span>Rundt 40 intervjuer viste hvordan prosjektlederne faktisk jobber</h3><p>Gruppen gjennomførte <b>rundt 40 semistrukturerte gruppeintervjuer</b> med prosjektledere, byggeledere, entreprenører og systemforvaltere, og jeg var med på om lag 20 av dem. Vi brukte intervjuguide og skrev notater etter hvert intervju.</p><p>I tillegg var vi på befaring på byggeplasser, gikk gjennom styrende dokumenter og prosesskart, og møtte Sykehusbygg, som har brukt Omega 365 i nesten ti år.</p></div><div class="media"><img class="free" src="img/prosjekthub-02.webp" alt="Studentgruppen i arbeid med intervjuer og kartlegging" width="753" height="518" loading="lazy"></div></li><li class="step"><span class="num" aria-hidden="true">3</span><div><h3><span class="visually-hidden">Steg 3: </span>Informasjonen fantes, men den var spredt</h3><p>Vi grupperte funnene i fem områder: informasjonsforvaltning, prosjektstyring, datakvalitet, kultur og teknologi. På tvers av dem fant vi én felles årsak: <b>informasjonen finnes, men den er spredt</b> på systemer, dokumenter og aktører. Brukerne må huske hvor ting ligger, og en endring blir lett bare gjort ett sted.</p><div class="decision"><p><span class="lbl">Derfor</span>Løsningen skulle ikke legge til nye datakilder, men <b>samle det som allerede finnes</b> og vise det for riktig rolle til riktig tid.</p></div></div><div class="media"><figure><img class="free" src="img/prosjekthub-04.webp" alt="Illustrasjon av en prosjektleder foran systemene Arkiv, FDV, BIM, Økonomi, Saksbehandling og Kontrakter" width="736" height="680" loading="lazy"><figcaption>Systemene en prosjektleder hopper mellom i dag.</figcaption></figure></div></li><li class="step"><span class="num" aria-hidden="true">4</span><div><h3><span class="visually-hidden">Steg 4: </span>Brukerhistoriene bestemte hva dashbordet skulle vise først</h3><p>Fra intervjuene skrev vi brukerhistorier som styrte prioriteringene. Designet bygger på <b>Nielsens brukbarhetsheuristikker</b>, særlig synlig systemstatus, gjenkjenning fremfor hukommelse, konsistens og brukerkontroll, og på Don Normans prinsipper om synlighet og tilbakemelding.</p><div class="decision"><p class="lbl-row"><span class="lbl">Fra funn til endring</span></p><ul class="changes"><li><span>Samlet oversikt</span><span class="arrow" aria-hidden="true">→</span><b>Alle saker med trafikklys</b></li><li><span>Personlig oppgaveliste</span><span class="arrow" aria-hidden="true">→</span><b>Dine oppgaver, sortert etter frist</b></li><li><span>Nye saker og varsler</span><span class="arrow" aria-hidden="true">→</span><b>Varsler i På jobb, koblet til chatten</b></li></ul></div></div><div class="media"><div class="us"><blockquote><b>Samlet oversikt</b>Som prosjektleder ønsker jeg å se alle oppgaver, varsler og hendelser samlet i ett dashbord, slik at jeg raskt ser hva som krever handling.</blockquote><blockquote><b>Personlig oppgaveliste</b>Som prosjektleder ønsker jeg en oppgaveliste der jeg kan markere oppgaver som fullført, slik at jeg ser hva som gjenstår.</blockquote><blockquote><b>Nye saker</b>Som prosjektleder ønsker jeg å se nye dokumenter, endringsvarsler og saker samlet, slik at jeg ikke går glipp av viktige hendelser.</blockquote></div></div></li><li class="step"><span class="num" aria-hidden="true">5</span><div><h3><span class="visually-hidden">Steg 5: </span>Brukertesten førte til tre konkrete endringer</h3><p>Mange brukere var på sommerferie mens vi designet, så vi brukte <b>heuristikkene til å evaluere og forbedre</b> prototypen underveis. Da de kom tilbake, testet vi den med brukere.</p><div class="decision"><p class="lbl-row"><span class="lbl">Fra funn til endring</span></p><ul class="changes"><li><span>Brukerne ville se prosjekt-ID fra Agresso</span><span class="arrow" aria-hidden="true">→</span><b>Feltet Prosjektinfo</b></li><li><span>De har ofte flere prosjekter samtidig</span><span class="arrow" aria-hidden="true">→</span><b>Prosjektvelger i brukerprofilen</b></li><li><span>De hopper mellom mange systemer</span><span class="arrow" aria-hidden="true">→</span><b>Snarveier direkte til systemene</b></li></ul></div></div><div class="media"><figure><img class="free" src="img/prosjekthub-08.webp" alt="Feltet Prosjektinfo i Prosjekthub" width="1016" height="346" loading="lazy"><figcaption>Feltet Prosjektinfo kom til etter brukertesten.</figcaption></figure></div></li></ol></section>
+<section class="c-sec solution" aria-labelledby="losning"><p class="eyebrow">Løsningen</p><h2 id="losning">Dashbordet viser riktig informasjon for riktig rolle</h2><p>En klikkbar Figma-prototype av et <b>rollebasert dashbord i Omega 365</b>. Vi tok utgangspunkt i prosjektlederen for å vise prinsippet, men hver rolle skal få sitt eget dashbord med informasjonen den trenger.</p><p class="hint">Trykk på bildet for å prøve prototypen selv.</p><a class="proto" href="https://www.figma.com/proto/qvTKq1UTLw1Cafg6NZph45/Prosjekthub?node-id=8-2&amp;page-id=4%3A8850&amp;starting-point-node-id=8%3A2&amp;t=GVI1zqyZwoGQvNqQ-1" target="_blank" rel="noopener"><img class="free" src="img/prosjekthub-05.webp" alt="Figma-prototype av Prosjekthub-dashbordet" width="2716" height="1840" loading="lazy"></a><div class="features"><div><h3>Snarveier</h3><p>Knapper til BIM, Arkiv, Økonomi og Dokumenter, og mapper du velger selv.</p></div><div><h3>Prosjektinfo</h3><p>Prosjektnummer, kategori, kostsjef og region på ett blikk, og bytte av prosjekt via profilen.</p></div><div><h3>Alle saker</h3><p>Et trafikklys viser status på sakene, med filtrering på fagområde, ansvarlig og dato.</p></div><div><h3>Dine oppgaver</h3><p>En personlig oppgaveliste sortert etter frist.</p></div><div><h3>KPIer</h3><p>Nøkkeltall og fremdrift for økonomi og milepæler.</p></div><div><h3>På jobb og chat</h3><p>Hvem som er pålogget, og en chat knyttet til hver sak som kan arkiveres for sporbarhet.</p></div></div></section>
+<section class="c-sec closing" aria-labelledby="resultat"><div><p class="eyebrow">Resultat</p><h2 id="resultat">Ledelsen og brukerne ønsket å se dashbordet realisert</h2><p>Vi presenterte løsningen for ledelsen og ansatte i Forsvarsbygg i en åpen presentasjon og fikk <b>mye positiv respons</b>. Brukerne vi hadde intervjuet, ønsket å se dashbordet realisert.</p><p>I rapporten anbefalte vi også hvordan dashbordet kan innføres: med <b>superbrukere, opplæring tilpasset hver rolle og pilotprosjekter</b>. Gevinsten avhenger nemlig av at folk faktisk tar systemet i bruk.</p></div><figure><img class="free" src="img/prosjekthub-17.webp" alt="Prosjekthub på mobil" width="924" height="866" loading="lazy"><figcaption>Dashbordet er også tenkt for mobil, så informasjonen kan tas med ut på byggeplassen.</figcaption></figure></section>
+<nav class="backnav" aria-label="Videre"><a class="btn" href="#top"><span aria-hidden="true">↑</span> Til toppen</a><a class="btn" href="./#prosjekter"><span aria-hidden="true">←</span> Tilbake til prosjekter</a></nav>
 </article>
 </main>
 <script>
@@ -233,10 +241,7 @@ footer{padding-block:64px;font-size:15px}
     var t=h.querySelector('.track'),p=h.querySelector('.prev'),n=h.querySelector('.next');
     // each arrow press moves to the start of the next or previous image
     function stops(){var pad=parseFloat(getComputedStyle(t).paddingLeft)||0,max=t.scrollWidth-t.clientWidth;
-      var out=[];Array.prototype.forEach.call(t.querySelectorAll('img'),function(i){
-        var k=i.clientHeight/(i.naturalHeight||i.clientHeight||1),pts=i.dataset.stops?i.dataset.stops.split(',').map(Number):[0];
-        pts.forEach(function(s){out.push(Math.min(max,Math.max(0,i.offsetLeft-pad+s*k)))});});
-      return out;}
+      return Array.prototype.map.call(t.querySelectorAll('img'),function(i){return Math.min(max,Math.max(0,i.offsetLeft-pad))});}
     function go(dir){var x=t.scrollLeft,s=stops(),target=null;
       if(dir>0){for(var k=0;k<s.length;k++){if(s[k]>x+4){target=s[k];break}} if(target===null)target=t.scrollWidth;}
       else{for(var k=s.length-1;k>=0;k--){if(s[k]<x-4){target=s[k];break}} if(target===null)target=0;}
