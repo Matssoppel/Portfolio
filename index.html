@@ -124,7 +124,8 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
 .mdlg .close:hover{background:var(--ink);color:var(--bg)}
 .mdlg .gal{position:relative;min-width:0}
 .mdlg .gtrack{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#03045e33 transparent}
-.mdlg .gtrack img{flex:none;height:min(460px,50vh);width:auto;max-width:none;scroll-snap-align:start;border:1.5px solid #000;background:#fff}
+.mdlg .gtrack img,.mdlg .gtrack video{flex:none;height:min(460px,50vh);width:auto;max-width:none;scroll-snap-align:start;border:1.5px solid #000;background:#fff}
+.mdlg .txt a{border-bottom:2px solid var(--ink);color:var(--ink);font-weight:600}
 .mdlg .gal .nav{top:calc(min(460px,50vh)/2 - 24px)}
 .mdlg .gal .prev{left:8px}.mdlg .gal .next{right:8px}
 .mdlg .txt{font-size:16px;line-height:1.55;max-width:760px}
@@ -135,7 +136,7 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
   .mtrack{padding-inline:0;scroll-padding-inline:0;gap:20px}
   .mcar .nav{display:none}
   .mdlg .in{padding:20px 18px 24px}
-  .mdlg .gtrack img{height:min(300px,42vh)}
+  .mdlg .gtrack img,.mdlg .gtrack video{height:min(300px,42vh)}
   .mdlg .gal .nav{display:none}
 }
 </style>
@@ -163,16 +164,17 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
  </div>
   <section class="grid">
   <a class="card" href="digitalisering-av-byggeplass.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-02.webp" alt="Prosjekthub" loading="lazy"></div><div class="txt"><h3>Prosjekthub</h3><p>Prototype av et rollebasert dashbord laget under et sommerinternship i Forsvarsbygg. Temaet var digitalisering av byggeplass og prosjektet kombinerer brukerintervjuer, befaringer og UX-design.</p><span class="tag">UX-design</span></div></a>
+  <a class="card" href="pultlampe.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-06.webp" alt="Den moderne pultlampen" loading="lazy"></div><div class="txt"><h3>Den moderne pultlampen</h3><p>En skrivebordslampe for videomøter, formet av to runder brukertesting. Testene viste at folk ville bruke lyset helt ulikt, så vi designet to paneler og en enkel betjening som lar hver bruker stille det inn selv.</p><span class="tag">Interaksjonsdesign</span></div></a>
+  <a class="card" href="knittr.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-07.webp" alt="Knittr" loading="lazy"></div><div class="txt"><h3>Knittr</h3><p>Et verktøy for å designe strikkemønstre, fra små mønsterruter til et helt plagg med økninger og fellinger. Jeg designet alt i Figma, og AI-assistenten Claude skrev koden. Et prosjekt om hvordan en designer kan bygge ekte, fungerende verktøy sammen med AI.</p><span class="tag">Design med AI</span></div></a>
   <a class="card" href="politiet-i-lomma.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-04.webp" alt="Politiet i lomma" loading="lazy"></div><div class="txt"><h3>Politiet i lomma</h3><p>Hva gjør du når du føler deg utrygg, men situasjonen ikke er alvorlig nok til å ringe politiet? Under UX-Cup-finalen hos Bekk designet vi "Trygg", en app som gir politiet en helt ny rolle i gråsonen mellom trygghet og fare. Fra idé til ferdig konsept på tre intense dager.</p><span class="tag">UX-design</span></div></a>
   <a class="card" href="workshops.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-05.webp" alt="Workshop for campusutvikling" loading="lazy"></div><div class="txt"><h3>Workshop for campusutvikling</h3><p>Åtte brukerinvolverende workshops med 15–40 deltakere, som del av OsloMets campusutviklingsplan. Jeg planla og ledet workshopene, og innspillene la grunnlaget for den endelige planen.</p><span class="tag">Brukermedvirkning</span></div></a>
-  <a class="card" href="snakk-til-meg.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-03.webp" alt="Snakk til meg" loading="lazy"></div><div class="txt"><h3>“Snakk til meg”</h3><p>Snakk til meg er en interaktiv installasjon laget i UiO-emnet Tangible Interaction, hvor en menneskestor dukke reagerer på besøkendes stemme gjennom en stepmotor og fiskesnører. Temaet var puls, og prosjektet kombinerer fysisk konstruksjon, mikroelektronikk og lyddesign.</p><span class="tag">Interaksjonsdesign</span></div></a>
-  <a class="card" href="pultlampe.html"><span class="pat" aria-hidden="true"></span><div class="img"><img src="img/hjem-06.webp" alt="Den moderne pultlampen" loading="lazy"></div><div class="txt"><h3>Den moderne pultlampen</h3><p>Ampær er en sammenleggbar skrivebordslampe laget i emnet Kritisk refleksjon i designpraksis ved OsloMet. Temaet var dårlig belysning i hjemmekontor under videomøter.</p><span class="tag">Produktdesign</span></div></a>
   </section>
   <section class="more" id="andre-prosjekter" aria-labelledby="andre-tittel">
    <h2 class="sec" id="andre-tittel">Andre prosjekter</h2>
    <p class="lead">Mindre prosjekter som viser andre sider av det jeg kan. Klikk på et prosjekt for å se mer.</p>
    <div class="mcar"><button type="button" class="nav prev" aria-label="Forrige prosjekt" hidden>←</button><div class="mtrack">
     <button type="button" class="mcard" data-open="d-output" aria-haspopup="dialog"><div class="ph"><img src="img/andre-output-01.webp" alt="Forsiden på Output utgave 15, «Våken»" loading="lazy"></div><h3>Studentmagasinet >Output</h3><p>Forside, redaksjonsside og illustrerte oppslag i studentmagasinet ved Institutt for informatikk.</p><div class="meta"><span class="tag">Redaksjonell design</span><span>2026</span></div></button>
+    <button type="button" class="mcard" data-open="d-snakk" aria-haspopup="dialog"><div class="ph"><img src="img/snakk-til-meg-10.webp" alt="Dukken belyst i mørket" loading="lazy"></div><h3>«Snakk til meg»</h3><p>En menneskestor dukke som våkner til liv når besøkende snakker til den.</p><div class="meta"><span class="tag">Interaksjonsdesign</span><span>2026</span></div></button>
     <button type="button" class="mcard" data-open="d-promillefri" aria-haspopup="dialog"><div class="ph"><img src="img/andre-promillefri-plakat.webp" alt="Plakat for Bacchus kombucha med teksten Hold ut natten" loading="lazy"></div><h3>Promillefri</h3><p>Bacheloroppgaven min: en kombucha-merkevare for unge som ikke drikker, men vil være med på festen.</p><div class="meta"><span class="tag">Konsept og merkevare</span><span>2022</span></div></button>
     <button type="button" class="mcard" data-open="d-tavlehonning" aria-haspopup="dialog"><div class="ph"><img src="img/andre-tavlehonning-rammer.webp" alt="Porsjonsrammer i bøkefinér med vokskaker" loading="lazy"></div><h3>Tavlehonning</h3><p>Prosjektleder for elleve studenter som laget produksjonsmetode og emballasje for tavlehonning.</p><div class="meta"><span class="tag">Prosjektledelse</span><span>2021</span></div></button>
     <button type="button" class="mcard" data-open="d-studentparlamentet" aria-haspopup="dialog"><div class="ph"><img src="img/andre-studentparlamentet-tiger.webp" alt="Maskoten Tigeren i fire positurer" loading="lazy"></div><h3>Studentparlamentets grafiske profil</h3><p>Ikonsett, maskot og logoer til Studentparlamentet ved OsloMet, pluss opplæring i visuell kommunikasjon.</p><div class="meta"><span class="tag">Grafisk design</span><span>2022–2023</span></div></button>
@@ -185,6 +187,11 @@ h2.sec{font-weight:600;font-size:32px;margin:0 0 72px}
    <ul class="links"><li><a href="https://www.linkedin.com/in/mats-ugland/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="cv.html">Se CV</a></li></ul>
   </section>
 </main>
+<dialog class="mdlg" id="d-snakk" aria-labelledby="d-snakk-t"><div class="in">
+  <header><div><h3 id="d-snakk-t">«Snakk til meg»</h3><div class="meta"><span class="tag">Interaksjonsdesign</span><span>2026</span></div></div><button type="button" class="close" aria-label="Lukk">×</button></header>
+  <div class="gal"><button type="button" class="nav prev" aria-label="Forrige bilde">←</button><div class="gtrack" tabindex="0" aria-label="Bilder og video"><video src="video/snakk-til-meg-installasjon.mp4" poster="img/snakk-til-meg-video-start.webp" width="720" height="798" muted loop playsinline autoplay preload="metadata" aria-label="Video av installasjonen"></video><img src="img/snakk-til-meg-10.webp" alt="Dukken belyst i mørket" width="1175" height="1762" loading="lazy"><img src="img/snakk-til-meg-11.webp" alt="Dukken løfter hodet i mørket" width="1176" height="1764" loading="lazy"><img src="img/snakk-til-meg-09.webp" alt="Dukken under hvitt slør med fiskesnører" width="1604" height="1069" loading="lazy"></div><button type="button" class="nav next" aria-label="Neste bilde">→</button></div>
+  <div class="txt"><p>En interaktiv installasjon laget i emnet Tangible Interaction ved UiO, der temaet for utstillingen var puls. En menneskestor dukke av sort gaffateip sitter under et hvitt slør i et mørkt rom. Når besøkende snakker til den, løfter den sakte hodet, og stopper samtalen, synker den sammen igjen.</p><p>Vi var fem i gruppen. Alt ble utviklet i fellesskap, men jeg tok mye av ansvaret for Arduino, mikroelektronikk og koding, altså det som får dukken til å reagere på stemmer. Publikum tok godt imot installasjonen, og en besøkende mente til og med at den hørte hjemme på Høstutstillingen.</p><p><a href="snakk-til-meg.html">Se hele prosjektet</a></p></div>
+</div></dialog>
 <!-- SKJULTE PROSJEKTER (Iskremboks for gjenbruk, Stitch-Wear)
 For å vise et prosjekt igjen: flytt <button class="mcard" ...> inn i <div class="mtrack"> i "Andre prosjekter",
 og flytt <dialog ...> ut av denne kommentaren, til resten av dialogene rett etter </main>.
